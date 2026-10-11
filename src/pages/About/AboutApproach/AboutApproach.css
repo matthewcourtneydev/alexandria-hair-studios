@@ -176,7 +176,7 @@
       width: 100%;
       height: clamp(260px, 72vw, 430px);
   
-      background-image: url('../../../images/scrapbook.png');
+      background-image: url('../../../assets/images/scrapbook.png');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: left center;
