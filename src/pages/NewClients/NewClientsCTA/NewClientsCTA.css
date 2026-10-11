@@ -1,0 +1,396 @@
+
+/* =========================================
+   NEW CLIENTS CTA
+========================================= */
+
+.new-clients-cta {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  
+    padding:
+      clamp(5rem, 8vw, 9rem)
+      var(--page-padding);
+  
+    background: var(--color-warm-white);
+    color: var(--color-black);
+  }
+  
+  .new-clients-cta__container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
+    align-items: center;
+    gap: clamp(3rem, 7vw, 8rem);
+  
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+  
+  /* =========================================
+     LEFT — CONTENT
+  ========================================= */
+  
+  .new-clients-cta__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+    max-width: 620px;
+  }
+  
+  .new-clients-cta__eyebrow {
+    display: block;
+    margin-bottom: 1.5rem;
+  
+    color: var(--color-pink-dark);
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+  }
+  
+  .new-clients-cta__title {
+    margin: 0;
+  
+    color: var(--color-black);
+    font-family: var(--font-display);
+    font-size: clamp(3.2rem, 5vw, 6rem);
+    font-weight: 400;
+    line-height: 1.07;
+    letter-spacing: -0.055em;
+  }
+  
+  .new-clients-cta__title span {
+    display: block;
+  
+    color: var(--color-pink-dark);
+    font-style: italic;
+    font-weight: 400;
+  }
+  
+  .new-clients-cta__description {
+    max-width: 480px;
+    margin: 1.75rem 0 0;
+  
+    color: #756a64;
+    font-family: var(--font-body);
+    font-size: 0.96rem;
+    line-height: 1.85;
+  }
+  
+  /* =========================================
+     BOOKING ACTIONS
+  ========================================= */
+  
+  .new-clients-cta__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.75rem;
+  
+    margin-top: 2.25rem;
+  }
+  
+  .new-clients-cta__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+  
+    padding: 1.1rem 1.5rem;
+  
+    border: 1px solid var(--color-pink-dark);
+    background: var(--color-pink-dark);
+  
+    color: white;
+    font-family: var(--font-body);
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+  
+    transition:
+      background-color 250ms ease,
+      border-color 250ms ease,
+      transform 250ms ease;
+  }
+  
+  .new-clients-cta__button:hover {
+    background: var(--color-black);
+    border-color: var(--color-black);
+    transform: translateY(-2px);
+  }
+  
+  .new-clients-cta__secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+  
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid var(--color-pink-dark);
+  
+    color: var(--color-black);
+    font-family: var(--font-body);
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+  
+    transition:
+      color 200ms ease,
+      gap 200ms ease;
+  }
+  
+  .new-clients-cta__secondary svg {
+    color: var(--color-pink-dark);
+  }
+  
+  .new-clients-cta__secondary:hover {
+    color: var(--color-pink-dark);
+    gap: 1.15rem;
+  }
+  
+  .new-clients-cta__button:focus-visible,
+  .new-clients-cta__secondary:focus-visible {
+    outline: 2px solid var(--color-black);
+    outline-offset: 5px;
+  }
+  
+  /* =========================================
+     SIGNATURE DETAIL
+  ========================================= */
+  
+  .new-clients-cta__signature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  
+    margin-top: 3rem;
+  
+    color: var(--color-pink-dark);
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+  
+  .new-clients-cta__signature-line {
+    width: 32px;
+    height: 1px;
+    background: var(--color-pink-dark);
+  }
+  
+  /* =========================================
+     RIGHT — IMAGE COMPOSITION
+  ========================================= */
+  
+  .new-clients-cta__visual {
+    position: relative;
+    min-width: 0;
+  
+    padding: 0 0 2rem 2rem;
+  }
+  
+  .new-clients-cta__image-wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+  }
+  
+  .new-clients-cta__image {
+    width: 100%;
+    aspect-ratio: 1.05;
+  
+    overflow: hidden;
+    background: #c6b8ac;
+  }
+  
+  .new-clients-cta__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .new-clients-cta__image--placeholder {
+    background:
+      linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.25),
+        rgba(24, 21, 20, 0.12)
+      ),
+      #c6b8ac;
+  }
+  
+  /* Pink offset panel */
+  
+  .new-clients-cta__accent {
+    position: absolute;
+    z-index: 1;
+  
+    top: 2rem;
+    right: 2rem;
+    bottom: 0;
+    left: 0;
+  
+    background: var(--color-pink-light);
+  }
+  
+  /* Editorial caption */
+  
+  .new-clients-cta__image-caption {
+    position: absolute;
+    z-index: 3;
+  
+    right: 0.4rem;
+    bottom: 0.5rem;
+  
+    color: var(--color-black);
+    font-family: var(--font-body);
+    font-size: 0.57rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    white-space: nowrap;
+  }
+  
+  /* =========================================
+     TABLET
+  ========================================= */
+  
+  @media (max-width: 1100px) {
+    .new-clients-cta__container {
+      gap: 3.5rem;
+    }
+  
+    .new-clients-cta__title {
+      font-size: clamp(3rem, 4.7vw, 4.5rem);
+    }
+  
+    .new-clients-cta__actions {
+      gap: 1.25rem;
+    }
+  
+    .new-clients-cta__description {
+      font-size: 0.91rem;
+    }
+  }
+  
+  /* =========================================
+     SMALL TABLET
+  ========================================= */
+  
+  @media (max-width: 800px) {
+    .new-clients-cta {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  
+    .new-clients-cta__container {
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+    }
+  
+    .new-clients-cta__content {
+      max-width: 700px;
+    }
+  
+    .new-clients-cta__title {
+      font-size: clamp(3.2rem, 7vw, 5rem);
+    }
+  
+    .new-clients-cta__visual {
+      width: 100%;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+  
+    .new-clients-cta__image {
+      aspect-ratio: 1.4;
+    }
+  }
+  
+  /* =========================================
+     MOBILE
+  ========================================= */
+  
+  @media (max-width: 600px) {
+    .new-clients-cta {
+      padding-top: 4.5rem;
+      padding-bottom: 4.5rem;
+    }
+  
+    .new-clients-cta__container {
+      gap: 3rem;
+    }
+  
+    .new-clients-cta__eyebrow {
+      margin-bottom: 1.25rem;
+      font-size: 0.62rem;
+    }
+  
+    .new-clients-cta__title {
+      font-size: clamp(2.9rem, 9vw, 4rem);
+    }
+  
+    .new-clients-cta__description {
+      margin-top: 1.25rem;
+      font-size: 0.89rem;
+      line-height: 1.8;
+    }
+  
+    .new-clients-cta__actions {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 1.5rem;
+  
+      margin-top: 1.75rem;
+    }
+  
+    .new-clients-cta__button {
+      padding: 1rem 1.25rem;
+      font-size: 0.63rem;
+    }
+  
+    .new-clients-cta__secondary {
+      font-size: 0.63rem;
+    }
+  
+    .new-clients-cta__signature {
+      margin-top: 2.5rem;
+      font-size: 1.1rem;
+    }
+  
+    .new-clients-cta__visual {
+      padding: 0 0 1.25rem 1.25rem;
+    }
+  
+    .new-clients-cta__accent {
+      top: 1.25rem;
+      right: 1.25rem;
+    }
+  
+    .new-clients-cta__image {
+      aspect-ratio: 1.05;
+    }
+  
+    .new-clients-cta__image-caption {
+      right: 0.2rem;
+      bottom: 0.35rem;
+      font-size: 0.47rem;
+      letter-spacing: 0.12em;
+    }
+  }
+  
+  /* =========================================
+     REDUCED MOTION
+  ========================================= */
+  
+  @media (prefers-reduced-motion: reduce) {
+    .new-clients-cta__button,
+    .new-clients-cta__secondary {
+      transition: none;
+    }
+  }
+  

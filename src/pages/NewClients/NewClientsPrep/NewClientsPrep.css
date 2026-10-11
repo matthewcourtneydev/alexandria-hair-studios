@@ -1,0 +1,292 @@
+
+/* =========================================
+   NEW CLIENTS PREP — EDITORIAL
+========================================= */
+
+.new-clients-prep {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding:
+      clamp(5rem, 8vw, 8rem)
+      var(--page-padding);
+    background: var(--color-cream);
+    color: var(--color-black);
+  }
+  
+  .new-clients-prep__container {
+    display: grid;
+    grid-template-columns:
+      minmax(0, 0.9fr)
+      minmax(0, 1.1fr);
+    align-items: center;
+    gap: clamp(4rem, 8vw, 9rem);
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+  
+  /* =========================================
+     LEFT — INTRODUCTION
+  ========================================= */
+  
+  .new-clients-prep__intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    max-width: 580px;
+  }
+  
+  .new-clients-prep__eyebrow {
+    display: block;
+    margin-bottom: 1.4rem;
+    color: var(--color-pink-dark);
+    font-family: var(--font-body);
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+  }
+  
+  .new-clients-prep__title {
+    margin: 0;
+    color: var(--color-black);
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 4vw, 4.8rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.055em;
+  }
+  
+  .new-clients-prep__title em {
+    display: block;
+    color: var(--color-pink-dark);
+    font-style: italic;
+    font-weight: 400;
+  }
+  
+  .new-clients-prep__description {
+    max-width: 420px;
+    margin: 1.5rem 0 0;
+    color: #756a64;
+    font-family: var(--font-body);
+    font-size: 0.94rem;
+    line-height: 1.85;
+  }
+  
+  /* =========================================
+     EDITORIAL PHOTOGRAPH
+  ========================================= */
+  
+  .new-clients-prep__visual {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1.65;
+    margin: 2.5rem 0 0;
+    overflow: hidden;
+    background: #c5b4aa;
+  }
+  
+  .new-clients-prep__visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 600ms ease;
+  }
+  
+  .new-clients-prep__visual:hover img {
+    transform: scale(1.035);
+  }
+  
+  /* =========================================
+     RIGHT — PREPARATION LIST
+  ========================================= */
+  
+  .new-clients-prep__list {
+    width: 100%;
+    min-width: 0;
+    border-top: 1px solid rgba(41, 33, 30, 0.16);
+  }
+  
+  .new-clients-prep__item {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: clamp(1rem, 2vw, 2rem);
+    padding: clamp(1.5rem, 2.5vw, 2.2rem) 0;
+    border-bottom: 1px solid rgba(41, 33, 30, 0.16);
+  }
+  
+  .new-clients-prep__item-number {
+    padding-top: 0.3rem;
+    color: var(--color-pink-dark);
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-style: italic;
+    line-height: 1;
+  }
+  
+  .new-clients-prep__item-content {
+    min-width: 0;
+  }
+  
+  .new-clients-prep__item-title {
+    margin: 0;
+    color: var(--color-black);
+    font-family: var(--font-display);
+    font-size: clamp(1.45rem, 2vw, 2rem);
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: -0.035em;
+  }
+  
+  .new-clients-prep__item-description {
+    max-width: 510px;
+    margin: 0.65rem 0 0;
+    color: #756a64;
+    font-family: var(--font-body);
+    font-size: 0.89rem;
+    line-height: 1.8;
+  }
+  
+  /* =========================================
+     SMALL DESKTOP
+  ========================================= */
+  
+  @media (max-width: 1100px) {
+    .new-clients-prep__container {
+      gap: 3.5rem;
+    }
+  
+    .new-clients-prep__title {
+      font-size: clamp(2.6rem, 4.2vw, 3.8rem);
+    }
+  
+    .new-clients-prep__item {
+      gap: 1rem;
+      padding: 1.5rem 0;
+    }
+  
+    .new-clients-prep__item-title {
+      font-size: 1.55rem;
+    }
+  
+    .new-clients-prep__item-description {
+      font-size: 0.86rem;
+    }
+  }
+  
+  /* =========================================
+     TABLET
+  ========================================= */
+  
+  @media (max-width: 800px) {
+    .new-clients-prep {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  
+    .new-clients-prep__container {
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+    }
+  
+    .new-clients-prep__intro {
+      max-width: 650px;
+    }
+  
+    .new-clients-prep__title {
+      font-size: clamp(3rem, 6vw, 4.5rem);
+    }
+  
+    .new-clients-prep__visual {
+      max-width: 550px;
+      margin-top: 2rem;
+    }
+  
+    .new-clients-prep__list {
+      max-width: 700px;
+    }
+  
+    .new-clients-prep__item {
+      padding: 1.65rem 0;
+    }
+  
+    .new-clients-prep__item-title {
+      font-size: 1.75rem;
+    }
+  
+    .new-clients-prep__item-description {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* =========================================
+     MOBILE
+  ========================================= */
+  
+  @media (max-width: 600px) {
+    .new-clients-prep {
+      padding-top: 4.5rem;
+      padding-bottom: 4.5rem;
+    }
+  
+    .new-clients-prep__container {
+      gap: 3rem;
+    }
+  
+    .new-clients-prep__eyebrow {
+      margin-bottom: 1.15rem;
+      font-size: 0.61rem;
+    }
+  
+    .new-clients-prep__title {
+      font-size: clamp(2.75rem, 9vw, 3.8rem);
+      line-height: 1.12;
+    }
+  
+    .new-clients-prep__description {
+      margin-top: 1.25rem;
+      font-size: 0.89rem;
+      line-height: 1.8;
+    }
+  
+    .new-clients-prep__visual {
+      width: 100%;
+      aspect-ratio: 1.4;
+      margin-top: 1.75rem;
+    }
+  
+    .new-clients-prep__item {
+      grid-template-columns: 30px minmax(0, 1fr);
+      gap: 0.85rem;
+      padding: 1.45rem 0;
+    }
+  
+    .new-clients-prep__item-number {
+      font-size: 1.1rem;
+    }
+  
+    .new-clients-prep__item-title {
+      font-size: 1.45rem;
+    }
+  
+    .new-clients-prep__item-description {
+      margin-top: 0.5rem;
+      font-size: 0.86rem;
+      line-height: 1.75;
+    }
+  }
+  
+  /* =========================================
+     REDUCED MOTION
+  ========================================= */
+  
+  @media (prefers-reduced-motion: reduce) {
+    .new-clients-prep__visual img {
+      transition: none;
+    }
+  }
+  

@@ -1,0 +1,398 @@
+
+/* =========================================
+   NEW CLIENTS PROCESS
+========================================= */
+
+.new-clients-process {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    overflow: hidden;
+  
+    padding:
+      clamp(6rem, 9vw, 10rem)
+      var(--page-padding);
+  
+    background: var(--color-black);
+    color: var(--color-text-light);
+  }
+  
+  /* =========================================
+     CHEETAH TEXTURE
+  ========================================= */
+  
+  .new-clients-process__texture {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    left: 35%;
+  
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+  
+    opacity: 0.055;
+  
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 0, 0, 0.5) 35%,
+      black 100%
+    );
+  
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 0, 0, 0.5) 35%,
+      black 100%
+    );
+  
+    pointer-events: none;
+  }
+  
+  /* =========================================
+     CONTAINER
+  ========================================= */
+  
+  .new-clients-process__container {
+    position: relative;
+    z-index: 1;
+  
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+  
+  /* =========================================
+     HEADER
+  ========================================= */
+  
+  .new-clients-process__header {
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.7fr);
+    align-items: end;
+    gap: clamp(3rem, 7vw, 8rem);
+  
+    margin-bottom: clamp(4rem, 7vw, 7rem);
+  }
+  
+  .new-clients-process__heading {
+    max-width: 780px;
+  }
+  
+  .new-clients-process__eyebrow {
+    display: block;
+    margin-bottom: 1.5rem;
+  
+    color: var(--color-pink-light);
+    font-family: var(--font-body);
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+  
+  /* =========================================
+     TITLE
+  ========================================= */
+  
+  .new-clients-process__title {
+    margin: 0;
+  
+    color: var(--color-text-light);
+    font-family: var(--font-display);
+    font-size: clamp(3.25rem, 5.2vw, 6rem);
+    font-weight: 400;
+    line-height: 1.07;
+    letter-spacing: -0.055em;
+  }
+  
+  .new-clients-process__title em {
+    display: block;
+  
+    color: var(--color-pink-light);
+    font-style: italic;
+    font-weight: 400;
+  }
+  
+  /* =========================================
+     INTRO COPY
+  ========================================= */
+  
+  .new-clients-process__intro {
+    max-width: 350px;
+    margin: 0 0 0.5rem;
+  
+    color: rgba(248, 244, 239, 0.68);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.9;
+  }
+  
+  /* =========================================
+     THREE-COLUMN STEPS
+  ========================================= */
+  
+  .new-clients-process__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  
+    border-top: 1px solid rgba(248, 244, 239, 0.2);
+    border-bottom: 1px solid rgba(248, 244, 239, 0.2);
+  }
+  
+  /* =========================================
+     INDIVIDUAL STEP
+  ========================================= */
+  
+  .new-clients-process__step {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+    min-width: 0;
+    padding:
+      clamp(2.5rem, 4vw, 4rem)
+      clamp(1.5rem, 3vw, 3.5rem);
+  
+    border-right: 1px solid rgba(248, 244, 239, 0.2);
+  }
+  
+  .new-clients-process__step:first-child {
+    padding-left: 0;
+  }
+  
+  .new-clients-process__step:last-child {
+    padding-right: 0;
+    border-right: none;
+  }
+  
+  /* =========================================
+     STEP NUMBER
+  ========================================= */
+  
+  .new-clients-process__number {
+    display: block;
+    margin-bottom: clamp(2.5rem, 4vw, 4rem);
+  
+    color: var(--color-pink-light);
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1;
+  }
+  
+  /* =========================================
+     STEP TITLE
+  ========================================= */
+  
+  .new-clients-process__step-title {
+    margin: 0;
+  
+    color: var(--color-text-light);
+    font-family: var(--font-display);
+    font-size: clamp(1.7rem, 2.25vw, 2.6rem);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+  }
+  
+  /* =========================================
+     STEP DESCRIPTION
+  ========================================= */
+  
+  .new-clients-process__step-description {
+    max-width: 350px;
+    margin: 1.25rem 0 0;
+  
+    color: rgba(248, 244, 239, 0.65);
+    font-family: var(--font-body);
+    font-size: 0.89rem;
+    font-weight: 400;
+    line-height: 1.85;
+  }
+  
+  /* =========================================
+     BOTTOM DETAIL
+  ========================================= */
+  
+  .new-clients-process__footer {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  
+    margin-top: 2.5rem;
+  }
+  
+  .new-clients-process__footer-line {
+    display: block;
+    width: 32px;
+    height: 1px;
+  
+    background: var(--color-pink-light);
+  }
+  
+  .new-clients-process__footer-text {
+    color: rgba(248, 244, 239, 0.5);
+    font-family: var(--font-body);
+    font-size: 0.57rem;
+    font-weight: 500;
+    letter-spacing: 0.17em;
+    line-height: 1.6;
+  }
+  
+  /* =========================================
+     SMALL DESKTOP
+  ========================================= */
+  
+  @media (max-width: 1100px) {
+    .new-clients-process__header {
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+    }
+  
+    .new-clients-process__title {
+      font-size: clamp(3rem, 5vw, 4.75rem);
+    }
+  
+    .new-clients-process__step {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  
+    .new-clients-process__step-title {
+      font-size: clamp(1.55rem, 2.4vw, 2rem);
+    }
+  
+    .new-clients-process__step-description {
+      font-size: 0.86rem;
+    }
+  }
+  
+  /* =========================================
+     TABLET
+  ========================================= */
+  
+  @media (max-width: 800px) {
+    .new-clients-process {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  
+    .new-clients-process__header {
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+      margin-bottom: 3.5rem;
+    }
+  
+    .new-clients-process__heading {
+      max-width: 650px;
+    }
+  
+    .new-clients-process__title {
+      font-size: clamp(3.1rem, 7vw, 4.5rem);
+    }
+  
+    .new-clients-process__intro {
+      max-width: 500px;
+      margin: 0;
+    }
+  
+    .new-clients-process__step {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+    }
+  
+    .new-clients-process__step-title {
+      font-size: 1.6rem;
+    }
+  
+    .new-clients-process__step-description {
+      font-size: 0.83rem;
+    }
+  
+    .new-clients-process__number {
+      margin-bottom: 2.5rem;
+    }
+  }
+  
+  /* =========================================
+     MOBILE
+  ========================================= */
+  
+  @media (max-width: 600px) {
+    .new-clients-process {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+  
+    .new-clients-process__texture {
+      left: 0;
+      opacity: 0.035;
+    }
+  
+    .new-clients-process__header {
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+  
+    .new-clients-process__eyebrow {
+      margin-bottom: 1.25rem;
+      font-size: 0.61rem;
+    }
+  
+    .new-clients-process__title {
+      font-size: clamp(2.9rem, 9vw, 4rem);
+    }
+  
+    .new-clients-process__intro {
+      font-size: 0.89rem;
+      line-height: 1.8;
+    }
+  
+    /* Stack steps vertically */
+  
+    .new-clients-process__grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .new-clients-process__step,
+    .new-clients-process__step:first-child,
+    .new-clients-process__step:last-child {
+      padding: 2.25rem 0;
+      border-right: none;
+      border-bottom: 1px solid rgba(248, 244, 239, 0.2);
+    }
+  
+    .new-clients-process__step:last-child {
+      border-bottom: none;
+    }
+  
+    .new-clients-process__number {
+      margin-bottom: 1.5rem;
+      font-size: 1.2rem;
+    }
+  
+    .new-clients-process__step-title {
+      font-size: 1.9rem;
+    }
+  
+    .new-clients-process__step-description {
+      max-width: 450px;
+      margin-top: 0.85rem;
+      font-size: 0.89rem;
+    }
+  
+    .new-clients-process__footer {
+      margin-top: 2rem;
+    }
+  
+    .new-clients-process__footer-text {
+      font-size: 0.52rem;
+      letter-spacing: 0.12em;
+    }
+  }
+  

@@ -1,0 +1,316 @@
+
+/* =========================================
+   ABOUT INTRO
+========================================= */
+
+.about-intro {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    overflow: hidden;
+    padding: clamp(5rem, 7vw, 7.5rem) 0;
+    background: var(--color-cream);
+    color: var(--color-black);
+    scroll-margin-top: 5rem;
+  }
+  
+  /* =========================================
+     CHEETAH TEXTURE
+  ========================================= */
+  
+  .about-intro__texture {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 64%;
+  
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+  
+    opacity: 0.15;
+    pointer-events: none;
+  
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 0, 0, 0.25) 22%,
+      #000 72%
+    );
+  
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      rgba(0, 0, 0, 0.25) 22%,
+      #000 72%
+    );
+  }
+  
+  /* =========================================
+     LAYOUT
+  ========================================= */
+  
+  .about-intro__container {
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(3.5rem, 8vw, 9rem);
+  
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+  
+  /* =========================================
+     PORTRAIT
+  ========================================= */
+  
+  .about-intro__visual {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+  }
+  
+  .about-intro__image-frame {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #c4b3a8;
+  }
+  
+  .about-intro__image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 0.82;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+  
+  .about-intro__photo-caption {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+  
+    color: #82766f;
+    font-family: var(--font-body);
+    font-size: 0.59rem;
+    font-weight: 500;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+  
+  /* =========================================
+     CONTENT
+  ========================================= */
+  
+  .about-intro__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 540px;
+  }
+  
+  .about-intro__eyebrow {
+    display: block;
+    margin-bottom: 1.25rem;
+  
+    color: var(--color-pink-dark);
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.19em;
+    text-transform: uppercase;
+  }
+  
+  .about-intro__title {
+    margin: 0;
+  
+    color: var(--color-black);
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 3.8vw, 4.2rem);
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: -0.055em;
+  }
+  
+  .about-intro__title em {
+    color: var(--color-pink-dark);
+    font-weight: 400;
+  }
+  
+  /* =========================================
+     BIOGRAPHY
+  ========================================= */
+  
+  .about-intro__copy {
+    max-width: 475px;
+    margin-top: 1.75rem;
+  }
+  
+  .about-intro__copy p {
+    margin: 0;
+  
+    color: #6e625c;
+    font-family: var(--font-body);
+    font-size: 0.93rem;
+    font-weight: 400;
+    line-height: 1.85;
+  }
+  
+  .about-intro__copy p + p {
+    margin-top: 1.25rem;
+  }
+  
+  .about-intro__copy .about-intro__lead {
+    color: #38302d;
+    font-size: 1.03rem;
+    line-height: 1.8;
+  }
+  
+  /* =========================================
+     SIGNATURE
+  ========================================= */
+  
+  .about-intro__signature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  
+    color: var(--color-pink-dark);
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-style: italic;
+  }
+  
+  .about-intro__signature-line {
+    width: 30px;
+    height: 1px;
+    flex-shrink: 0;
+    background: var(--color-pink-dark);
+  }
+  
+  /* =========================================
+     TABLET
+  ========================================= */
+  
+  @media (max-width: 1100px) {
+    .about-intro__container {
+      gap: clamp(2.5rem, 5vw, 5rem);
+    }
+  
+    .about-intro__title {
+      font-size: clamp(2.65rem, 4vw, 3.75rem);
+    }
+  
+    .about-intro__copy p {
+      font-size: 0.9rem;
+    }
+  
+    .about-intro__copy .about-intro__lead {
+      font-size: 1rem;
+    }
+  }
+  
+  /* =========================================
+     SMALL TABLET
+  ========================================= */
+  
+  @media (max-width: 800px) {
+    .about-intro {
+      padding: 5rem 0;
+    }
+  
+    .about-intro__container {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  
+    .about-intro__visual {
+      max-width: 540px;
+    }
+  
+    .about-intro__image {
+      aspect-ratio: 0.9;
+    }
+  
+    .about-intro__content {
+      max-width: 650px;
+    }
+  
+    .about-intro__title {
+      font-size: clamp(2.8rem, 6vw, 3.75rem);
+    }
+  
+    .about-intro__texture {
+      top: 30%;
+      width: 100%;
+      opacity: 0.06;
+    }
+  }
+  
+  /* =========================================
+     MOBILE
+  ========================================= */
+  
+  @media (max-width: 600px) {
+    .about-intro {
+      padding: 4rem 0 4.5rem;
+    }
+  
+    .about-intro__container {
+      gap: 2.5rem;
+    }
+  
+    .about-intro__image {
+      aspect-ratio: 0.82;
+      object-position: center 25%;
+    }
+  
+    .about-intro__photo-caption {
+      font-size: 0.53rem;
+      letter-spacing: 0.1em;
+    }
+  
+    .about-intro__eyebrow {
+      margin-bottom: 1rem;
+      font-size: 0.6rem;
+    }
+  
+    .about-intro__title {
+      font-size: clamp(2.8rem, 9vw, 3.5rem);
+    }
+  
+    .about-intro__copy {
+      margin-top: 1.5rem;
+    }
+  
+    .about-intro__copy p {
+      font-size: 0.89rem;
+      line-height: 1.8;
+    }
+  
+    .about-intro__copy .about-intro__lead {
+      font-size: 0.98rem;
+    }
+  
+    .about-intro__copy p + p {
+      margin-top: 1.15rem;
+    }
+  
+    .about-intro__signature {
+      margin-top: 1.75rem;
+      font-size: 1.15rem;
+    }
+  
+    .about-intro__texture {
+      top: 42%;
+      width: 100%;
+      opacity: 0.045;
+    }
+  }
+  

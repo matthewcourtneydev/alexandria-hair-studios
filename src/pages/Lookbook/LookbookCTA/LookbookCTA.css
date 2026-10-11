@@ -1,0 +1,387 @@
+
+/* =========================================
+   LOOKBOOK CTA
+========================================= */
+
+.lookbook-cta {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  
+    background: #f0dedd;
+    color: var(--color-black);
+  }
+  
+  .lookbook-cta__container {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    align-items: center;
+    gap: clamp(3rem, 6vw, 7rem);
+  
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  
+    padding:
+      clamp(5rem, 8vw, 8rem)
+      var(--page-padding);
+  }
+  
+  /* =========================================
+     LEFT — CONTENT
+  ========================================= */
+  
+  .lookbook-cta__content {
+    position: relative;
+    z-index: 2;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+    max-width: 660px;
+  }
+  
+  .lookbook-cta__eyebrow {
+    display: block;
+    margin-bottom: 1.5rem;
+  
+    color: var(--color-pink-dark);
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+  }
+  
+  .lookbook-cta__title {
+    margin: 0;
+  
+    color: var(--color-black);
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 5.5vw, 6.5rem);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.055em;
+  }
+  
+  .lookbook-cta__title span {
+    display: block;
+  
+    color: var(--color-pink-dark);
+    font-style: italic;
+    font-weight: 400;
+  }
+  
+  .lookbook-cta__description {
+    max-width: 510px;
+    margin: 1.75rem 0 0;
+  
+    color: #6e625c;
+    font-family: var(--font-body);
+    font-size: 0.96rem;
+    line-height: 1.85;
+  }
+  
+  /* =========================================
+     ACTIONS
+  ========================================= */
+  
+  .lookbook-cta__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.75rem;
+  
+    margin-top: 2rem;
+  }
+  
+  .lookbook-cta__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+  
+    padding: 1.1rem 1.5rem;
+  
+    border: 1px solid var(--color-black);
+    background: var(--color-black);
+  
+    color: var(--color-cream);
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-decoration: none;
+  
+    transition:
+      background-color 250ms ease,
+      border-color 250ms ease,
+      transform 250ms ease;
+  }
+  
+  .lookbook-cta__button:hover {
+    background: var(--color-pink-dark);
+    border-color: var(--color-pink-dark);
+    transform: translateY(-2px);
+  }
+  
+  .lookbook-cta__secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+  
+    padding-bottom: 0.45rem;
+  
+    border-bottom: 1px solid var(--color-pink-dark);
+  
+    color: var(--color-black);
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-decoration: none;
+  
+    transition:
+      color 200ms ease,
+      gap 200ms ease;
+  }
+  
+  .lookbook-cta__secondary svg {
+    color: var(--color-pink-dark);
+  }
+  
+  .lookbook-cta__secondary:hover {
+    gap: 1.1rem;
+    color: var(--color-pink-dark);
+  }
+  
+  .lookbook-cta__button:focus-visible,
+  .lookbook-cta__secondary:focus-visible {
+    outline: 2px solid var(--color-black);
+    outline-offset: 4px;
+  }
+  
+  /* =========================================
+     RIGHT — EDITORIAL IMAGE
+  ========================================= */
+  
+  .lookbook-cta__visual {
+    position: relative;
+    min-width: 0;
+    padding: 0 2rem 2rem 0;
+    isolation: isolate;
+  }
+  
+  .lookbook-cta__image-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 0.92;
+  }
+  
+  /* Offset pink panel */
+  
+  .lookbook-cta__image-frame::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+  
+    top: 2rem;
+    right: -2rem;
+    bottom: -2rem;
+    left: 2rem;
+  
+    background: var(--color-pink);
+  }
+  
+  .lookbook-cta__image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  
+    background: #c4aea6;
+  }
+  
+  .lookbook-cta__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .lookbook-cta__image--placeholder {
+    background:
+      linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.2),
+        rgba(24, 21, 20, 0.18)
+      ),
+      #c4aea6;
+  }
+  
+  /* =========================================
+     EDITORIAL DETAILS
+  ========================================= */
+  
+  .lookbook-cta__image-caption {
+    position: absolute;
+    z-index: 2;
+  
+    right: 0;
+    bottom: -0.75rem;
+  
+    color: var(--color-pink-dark);
+    font-family: var(--font-body);
+    font-size: 0.58rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    white-space: nowrap;
+  }
+  
+  .lookbook-cta__watermark {
+    position: absolute;
+    z-index: -1;
+  
+    left: -4rem;
+    bottom: -3rem;
+  
+    color: rgba(169, 109, 121, 0.16);
+    font-family: var(--font-display);
+    font-size: clamp(8rem, 14vw, 16rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.08em;
+  
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  /* =========================================
+     TABLET
+  ========================================= */
+  
+  @media (max-width: 1100px) {
+    .lookbook-cta__container {
+      gap: 3rem;
+    }
+  
+    .lookbook-cta__title {
+      font-size: clamp(3.2rem, 5vw, 5rem);
+    }
+  
+    .lookbook-cta__description {
+      font-size: 0.91rem;
+    }
+  
+    .lookbook-cta__actions {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+  
+  /* =========================================
+     SMALL TABLET
+  ========================================= */
+  
+  @media (max-width: 800px) {
+    .lookbook-cta__container {
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+    }
+  
+    .lookbook-cta__content {
+      max-width: 650px;
+    }
+  
+    .lookbook-cta__title {
+      font-size: clamp(3.5rem, 7vw, 5rem);
+    }
+  
+    .lookbook-cta__visual {
+      width: 100%;
+      max-width: 550px;
+      margin: 0 auto;
+    }
+  
+    .lookbook-cta__image-frame {
+      aspect-ratio: 1.1;
+    }
+  }
+  
+  /* =========================================
+     MOBILE
+  ========================================= */
+  
+  @media (max-width: 600px) {
+    .lookbook-cta__container {
+      gap: 3rem;
+  
+      padding:
+        4.5rem
+        var(--page-padding);
+    }
+  
+    .lookbook-cta__eyebrow {
+      margin-bottom: 1.25rem;
+      font-size: 0.62rem;
+    }
+  
+    .lookbook-cta__title {
+      font-size: clamp(3rem, 9vw, 4rem);
+    }
+  
+    .lookbook-cta__description {
+      margin-top: 1.5rem;
+      font-size: 0.89rem;
+      line-height: 1.8;
+    }
+  
+    .lookbook-cta__actions {
+      margin-top: 1.75rem;
+    }
+  
+    .lookbook-cta__button,
+    .lookbook-cta__secondary {
+      font-size: 0.62rem;
+    }
+  
+    .lookbook-cta__visual {
+      padding: 0 1.25rem 1.25rem 0;
+    }
+  
+    .lookbook-cta__image-frame {
+      aspect-ratio: 0.95;
+    }
+  
+    .lookbook-cta__image-frame::before {
+      top: 1.25rem;
+      right: -1.25rem;
+      bottom: -1.25rem;
+      left: 1.25rem;
+    }
+  
+    .lookbook-cta__image-caption {
+      bottom: -0.6rem;
+      font-size: 0.48rem;
+    }
+  
+    .lookbook-cta__watermark {
+      left: -1rem;
+      bottom: -1rem;
+      font-size: 30vw;
+    }
+  }
+  
+  /* =========================================
+     REDUCED MOTION
+  ========================================= */
+  
+  @media (prefers-reduced-motion: reduce) {
+    .lookbook-cta__button,
+    .lookbook-cta__secondary {
+      transition: none;
+    }
+  }
+  

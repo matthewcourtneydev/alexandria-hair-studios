@@ -1,0 +1,338 @@
+/* =========================================
+   ABOUT HERO
+========================================= */
+
+.about-hero {
+    position: relative;
+    isolation: isolate;
+  
+    display: flex;
+    align-items: center;
+  
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+  
+    overflow: hidden;
+  
+    background-color: #181514;
+    background-image: var(--about-hero-image);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    color: var(--color-cream);
+  }
+  
+  /* =========================================
+     PHOTOGRAPHIC GRADIENT
+  ========================================= */
+  
+  .about-hero::before {
+    content: '';
+  
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  
+    background: linear-gradient(
+      90deg,
+      rgba(18, 16, 16, 0.74) 0%,
+      rgba(18, 16, 16, 0.58) 28%,
+      rgba(18, 16, 16, 0.18) 58%,
+      rgba(18, 16, 16, 0.04) 100%
+    );
+  
+    pointer-events: none;
+  }
+  
+  /* =========================================
+     CONTAINER
+  ========================================= */
+  
+  .about-hero__container {
+    position: relative;
+  
+    display: flex;
+    align-items: center;
+  
+    width: 100%;
+    min-height: inherit;
+  
+    padding-top: clamp(8rem, 12vw, 12rem);
+    padding-bottom: clamp(7rem, 10vw, 10rem);
+  }
+  
+  /* =========================================
+     CONTENT
+  ========================================= */
+  
+  .about-hero__content {
+    position: relative;
+    z-index: 2;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+    width: 100%;
+    max-width: 650px;
+  }
+  
+  /* =========================================
+     EYEBROW
+  ========================================= */
+  
+  .about-hero__eyebrow {
+    display: block;
+  
+    margin-bottom: 1.75rem;
+  
+    color: var(--color-pink-light);
+  
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 600;
+  
+    letter-spacing: 0.2em;
+    line-height: 1.5;
+  }
+  
+  /* =========================================
+     TITLE
+  ========================================= */
+  
+  .about-hero__title {
+    margin: 0;
+  
+    color: var(--color-cream);
+  
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 6.2vw, 7rem);
+    font-weight: 400;
+  
+    line-height: 1.03;
+    letter-spacing: -0.06em;
+  }
+  
+  .about-hero__title em {
+    display: block;
+  
+    color: var(--color-pink-light);
+  
+    font-weight: 400;
+    line-height: 1.12;
+  }
+  
+  /* =========================================
+     DESCRIPTION
+  ========================================= */
+  
+  .about-hero__description {
+    max-width: 460px;
+  
+    margin: 2rem 0 0;
+  
+    color: #d0c6c0;
+  
+    font-family: var(--font-body);
+    font-size: clamp(0.9rem, 1vw, 1rem);
+  
+    line-height: 1.85;
+  }
+  
+  /* =========================================
+     SCROLL LINK
+  ========================================= */
+  
+  .about-hero__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+  
+    gap: 2rem;
+  
+    margin-top: 2.5rem;
+    padding-bottom: 0.75rem;
+  
+    border-bottom: 1px solid var(--color-pink);
+  
+    color: var(--color-cream);
+  
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 600;
+  
+    letter-spacing: 0.14em;
+    text-decoration: none;
+  
+    transition:
+      color 250ms ease,
+      border-color 250ms ease,
+      gap 250ms ease;
+  }
+  
+  .about-hero__link svg {
+    color: var(--color-pink-light);
+  }
+  
+  .about-hero__link:hover {
+    gap: 2.5rem;
+    color: var(--color-pink-light);
+  }
+  
+  .about-hero__link:focus-visible {
+    outline: 2px solid var(--color-pink-light);
+    outline-offset: 5px;
+  }
+  
+  /* =========================================
+     LOCATION DETAIL
+  ========================================= */
+  
+  .about-hero__location {
+    position: absolute;
+  
+    right: var(--page-padding);
+    bottom: 2.5rem;
+  
+    color: rgba(245, 240, 233, 0.55);
+  
+    font-family: var(--font-body);
+    font-size: 0.58rem;
+    font-weight: 500;
+  
+    letter-spacing: 0.16em;
+  }
+  
+  /* =========================================
+     TABLET
+  ========================================= */
+  
+  @media (max-width: 1100px) {
+    .about-hero {
+      background-position: 58% center;
+    }
+  
+    .about-hero__content {
+      max-width: 570px;
+    }
+  
+    .about-hero__title {
+      font-size: clamp(3.75rem, 6vw, 5.75rem);
+    }
+  
+    .about-hero::before {
+      background: linear-gradient(
+        90deg,
+        rgba(18, 16, 16, 0.84) 0%,
+        rgba(18, 16, 16, 0.65) 40%,
+        rgba(18, 16, 16, 0.16) 100%
+      );
+    }
+  }
+  
+  /* =========================================
+     MOBILE
+  ========================================= */
+  
+  @media (max-width: 767px) {
+    .about-hero {
+      min-height: 100vh;
+      min-height: 100svh;
+  
+      align-items: flex-end;
+  
+      background-position: 64% center;
+    }
+  
+    .about-hero::before {
+      background: linear-gradient(
+        180deg,
+        rgba(18, 16, 16, 0.12) 0%,
+        rgba(18, 16, 16, 0.16) 24%,
+        rgba(18, 16, 16, 0.62) 48%,
+        rgba(18, 16, 16, 0.93) 78%,
+        rgba(18, 16, 16, 0.98) 100%
+      );
+    }
+  
+    .about-hero__container {
+      align-items: flex-end;
+  
+      padding-top: 8rem;
+      padding-bottom: 7rem;
+    }
+  
+    .about-hero__content {
+      max-width: 100%;
+    }
+  
+    .about-hero__eyebrow {
+      margin-bottom: 1.25rem;
+      font-size: 0.62rem;
+    }
+  
+    .about-hero__title {
+      font-size: clamp(3.5rem, 10vw, 5rem);
+    }
+  
+    .about-hero__description {
+      max-width: 390px;
+  
+      margin-top: 1.5rem;
+  
+      font-size: 0.89rem;
+      line-height: 1.8;
+    }
+  
+    .about-hero__link {
+      margin-top: 2rem;
+      font-size: 0.65rem;
+    }
+  
+    .about-hero__location {
+      right: auto;
+      left: var(--page-padding);
+      bottom: 2rem;
+  
+      font-size: 0.52rem;
+    }
+  }
+  
+  /* =========================================
+     SMALL MOBILE
+  ========================================= */
+  
+  @media (max-width: 420px) {
+    .about-hero {
+      background-position: 66% center;
+    }
+  
+    .about-hero__container {
+      padding-bottom: 6.5rem;
+    }
+  
+    .about-hero__title {
+      font-size: clamp(3rem, 11vw, 4rem);
+    }
+  
+    .about-hero__description {
+      font-size: 0.86rem;
+    }
+  
+    .about-hero__location {
+      font-size: 0.48rem;
+      letter-spacing: 0.1em;
+    }
+  }
+  
+  /* =========================================
+     REDUCED MOTION
+  ========================================= */
+  
+  @media (prefers-reduced-motion: reduce) {
+    .about-hero__link {
+      transition: none;
+    }
+  }

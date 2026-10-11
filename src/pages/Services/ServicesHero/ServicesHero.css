@@ -1,0 +1,454 @@
+
+/* =========================================
+   SERVICES HERO
+   Alexandria Hair Studios
+========================================= */
+
+.services-hero {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    overflow: hidden;
+    background: #181514;
+    color: var(--color-cream);
+  }
+  
+  /* =========================================
+     BACKGROUND PHOTOGRAPH
+  ========================================= */
+  
+  .services-hero__image {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+    background: #181514;
+  }
+  
+  .services-hero__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+  
+  /* =========================================
+     SUBTLE DARK PHOTOGRAPHIC OVERLAY
+  ========================================= */
+  
+  .services-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(
+      90deg,
+      rgba(18, 15, 15, 0.72) 0%,
+      rgba(18, 15, 15, 0.54) 25%,
+      rgba(18, 15, 15, 0.25) 47%,
+      rgba(18, 15, 15, 0.06) 70%,
+      transparent 100%
+    );
+  }
+  
+  /* =========================================
+     CONTAINER
+  ========================================= */
+  
+  .services-hero__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: var(--max-width);
+    min-height: inherit;
+    margin: 0 auto;
+    padding:
+      clamp(8rem, 10vw, 10rem)
+      var(--page-padding)
+      clamp(7rem, 9vw, 9rem);
+  }
+  
+  /* =========================================
+     CONTENT
+  ========================================= */
+  
+  .services-hero__content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 620px;
+  }
+  
+  /* =========================================
+     EYEBROW
+  ========================================= */
+  
+  .services-hero__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: clamp(1.5rem, 2.5vw, 2.25rem);
+    color: var(--color-pink-light);
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+  
+  .services-hero__eyebrow-line {
+    display: block;
+    flex-shrink: 0;
+    width: 30px;
+    height: 1px;
+    background: var(--color-pink-light);
+  }
+  
+  /* =========================================
+     HEADLINE
+  ========================================= */
+  
+  .services-hero__title {
+    margin: 0;
+    color: var(--color-warm-white);
+    font-family: var(--font-display);
+    font-size: clamp(3.25rem, 5vw, 5.75rem);
+    font-weight: 400;
+    letter-spacing: -0.06em;
+    line-height: 1.07;
+  }
+  
+  .services-hero__title em {
+    display: block;
+    color: var(--color-pink-light);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.14;
+  }
+  
+  /* =========================================
+     DESCRIPTION
+  ========================================= */
+  
+  .services-hero__description {
+    max-width: 385px;
+    margin: clamp(1.5rem, 2.5vw, 2rem) 0 0;
+    color: rgba(250, 247, 242, 0.84);
+    font-family: var(--font-body);
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    font-weight: 400;
+    line-height: 1.8;
+  }
+  
+  /* =========================================
+     PRIMARY BUTTON
+  ========================================= */
+  
+  .services-hero__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    min-height: 48px;
+    margin-top: clamp(1.75rem, 2.5vw, 2.5rem);
+    padding: 0.95rem 1.4rem;
+    border: 1px solid var(--color-pink);
+    border-radius: 0;
+    background: var(--color-pink);
+    color: var(--color-black);
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    line-height: 1.4;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition:
+      background-color 250ms ease,
+      border-color 250ms ease,
+      transform 250ms ease;
+  }
+  
+  .services-hero__button svg {
+    flex-shrink: 0;
+    transition: transform 250ms ease;
+  }
+  
+  .services-hero__button:hover {
+    background: var(--color-pink-light);
+    border-color: var(--color-pink-light);
+  }
+  
+  .services-hero__button:hover svg {
+    transform: translate(3px, -3px);
+  }
+  
+  .services-hero__button:focus-visible,
+  .services-hero__scroll:focus-visible {
+    outline: 2px solid var(--color-pink-light);
+    outline-offset: 5px;
+  }
+  
+  /* =========================================
+     SCROLL INDICATOR
+  ========================================= */
+  
+  .services-hero__scroll {
+    position: absolute;
+    z-index: 2;
+    bottom: clamp(2rem, 3.5vw, 3.5rem);
+    left: var(--page-padding);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: var(--color-warm-white);
+    font-family: var(--font-body);
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    line-height: 1.5;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  
+  .services-hero__scroll svg {
+    flex-shrink: 0;
+    transition: transform 250ms ease;
+  }
+  
+  .services-hero__scroll:hover svg {
+    transform: translateY(4px);
+  }
+  
+  /* =========================================
+     IMAGE SIGNATURE
+  ========================================= */
+  
+  .services-hero__signature {
+    position: absolute;
+    z-index: 2;
+    right: var(--page-padding);
+    bottom: clamp(2rem, 3.5vw, 3.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.35rem;
+    color: var(--color-cream);
+    font-family: var(--font-body);
+    font-size: 0.56rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    line-height: 1.5;
+    text-align: right;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
+  }
+  
+  /* =========================================
+     LAPTOP
+  ========================================= */
+  
+  @media (max-width: 1200px) {
+    .services-hero__content {
+      max-width: 560px;
+    }
+  
+    .services-hero__title {
+      font-size: clamp(3.3rem, 5.4vw, 5rem);
+    }
+  
+    .services-hero::after {
+      background: linear-gradient(
+        90deg,
+        rgba(18, 15, 15, 0.78) 0%,
+        rgba(18, 15, 15, 0.58) 35%,
+        rgba(18, 15, 15, 0.2) 75%,
+        transparent 100%
+      );
+    }
+  }
+  
+  /* =========================================
+     TABLET
+  ========================================= */
+  
+  @media (max-width: 900px) {
+    .services-hero__container {
+      padding-top: 9rem;
+      padding-bottom: 7rem;
+    }
+  
+    .services-hero__content {
+      max-width: 490px;
+    }
+  
+    .services-hero__title {
+      font-size: clamp(3rem, 6.6vw, 4.75rem);
+    }
+  
+    .services-hero__image img {
+      object-position: 60% center;
+    }
+  
+    .services-hero__signature {
+      display: none;
+    }
+  }
+  
+  /* =========================================
+     MOBILE
+  ========================================= */
+  
+  @media (max-width: 600px) {
+    .services-hero {
+      align-items: stretch;
+      min-height: 100vh;
+      min-height: 100svh;
+    }
+  
+    .services-hero__image img {
+      object-position: 60% center;
+    }
+  
+    /*
+     * Keep the image visible across the full
+     * viewport. No cream fade on mobile.
+     */
+    .services-hero::after {
+      background: linear-gradient(
+        to bottom,
+        rgba(18, 15, 15, 0.25) 0%,
+        rgba(18, 15, 15, 0.12) 28%,
+        rgba(18, 15, 15, 0.35) 50%,
+        rgba(18, 15, 15, 0.72) 75%,
+        rgba(18, 15, 15, 0.85) 100%
+      );
+    }
+  
+    .services-hero__container {
+      justify-content: flex-end;
+      min-height: inherit;
+      padding-top: 7rem;
+      padding-bottom: 7rem;
+    }
+  
+    .services-hero__content {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    /* Eyebrow */
+  
+    .services-hero__eyebrow {
+      gap: 0.7rem;
+      margin-bottom: 1.2rem;
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+    }
+  
+    .services-hero__eyebrow-line {
+      width: 25px;
+    }
+  
+    /* Headline */
+  
+    .services-hero__title {
+      font-size: clamp(2.8rem, 9.5vw, 4.1rem);
+      letter-spacing: -0.055em;
+      line-height: 1.08;
+    }
+  
+    .services-hero__title em {
+      line-height: 1.14;
+    }
+  
+    /* Description */
+  
+    .services-hero__description {
+      max-width: 340px;
+      margin-top: 1.25rem;
+      font-size: 0.9rem;
+      line-height: 1.75;
+    }
+  
+    /* Button */
+  
+    .services-hero__button {
+      min-height: 46px;
+      margin-top: 1.75rem;
+      padding: 0.9rem 1.2rem;
+      font-size: 0.65rem;
+    }
+  
+    /* Scroll prompt */
+  
+    .services-hero__scroll {
+      bottom: 1.75rem;
+      left: var(--page-padding);
+      gap: 0.75rem;
+      font-size: 0.57rem;
+    }
+  
+    .services-hero__signature {
+      display: none;
+    }
+  }
+  
+  /* =========================================
+     SMALL MOBILE
+  ========================================= */
+  
+  @media (max-width: 380px) {
+    .services-hero__container {
+      padding-top: 6rem;
+      padding-bottom: 5.5rem;
+    }
+  
+    .services-hero__title {
+      font-size: clamp(2.5rem, 10vw, 2.9rem);
+    }
+  
+    .services-hero__description {
+      max-width: 290px;
+      font-size: 0.88rem;
+    }
+  
+    .services-hero__button {
+      margin-top: 1.5rem;
+    }
+  
+    .services-hero__scroll {
+      bottom: 1.25rem;
+    }
+  }
+  
+  /* =========================================
+     REDUCED MOTION
+  ========================================= */
+  
+  @media (prefers-reduced-motion: reduce) {
+    .services-hero__button,
+    .services-hero__button svg,
+    .services-hero__scroll svg {
+      transition: none;
+    }
+  
+    .services-hero__button:hover svg,
+    .services-hero__scroll:hover svg {
+      transform: none;
+    }
+  }
+  

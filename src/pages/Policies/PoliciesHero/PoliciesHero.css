@@ -1,0 +1,338 @@
+
+/* =========================================
+   POLICIES HERO
+========================================= */
+
+.policies-hero {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100svh;
+    overflow: hidden;
+  
+    display: flex;
+    align-items: center;
+  
+    background-color: var(--color-black);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+    color: var(--color-warm-white);
+  }
+  
+  /* =========================================
+     SUBTLE DARK OVERLAY
+  ========================================= */
+  
+  .policies-hero__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  
+    background: linear-gradient(
+      90deg,
+      rgba(10, 9, 9, 0.52) 0%,
+      rgba(10, 9, 9, 0.28) 45%,
+      rgba(10, 9, 9, 0.12) 100%
+    );
+  }
+  
+  /* =========================================
+     CONTAINER
+  ========================================= */
+  
+  .policies-hero__container {
+    position: relative;
+    z-index: 1;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+    width: 100%;
+    max-width: 1800px;
+    min-height: 100vh;
+    min-height: 100svh;
+  
+    margin: 0 auto;
+    padding:
+      clamp(9rem, 14vh, 12rem)
+      var(--page-padding)
+      clamp(5rem, 9vh, 8rem);
+  }
+  
+  /* =========================================
+     CONTENT
+  ========================================= */
+  
+  .policies-hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  
+    width: 100%;
+    max-width: 740px;
+  }
+  
+  /* Eyebrow */
+  
+  .policies-hero__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  
+    margin-bottom: 1.75rem;
+  
+    color: var(--color-pink-light);
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+  }
+  
+  .policies-hero__eyebrow::before {
+    content: "";
+    display: block;
+    width: 38px;
+    height: 1px;
+    background: var(--color-pink-light);
+  }
+  
+  /* Title */
+  
+  .policies-hero__title {
+    margin: 0;
+  
+    color: var(--color-warm-white);
+    font-family: var(--font-display);
+    font-size: clamp(4rem, 6.5vw, 8rem);
+    font-weight: 400;
+    line-height: 1.02;
+    letter-spacing: -0.06em;
+  }
+  
+  .policies-hero__title span {
+    display: block;
+  
+    color: var(--color-pink-light);
+    font-style: italic;
+    font-weight: 400;
+  }
+  
+  /* Description */
+  
+  .policies-hero__description {
+    max-width: 470px;
+    margin: 2rem 0 0;
+  
+    color: rgba(250, 247, 242, 0.78);
+    font-family: var(--font-body);
+    font-size: 0.96rem;
+    line-height: 1.85;
+  }
+  
+  /* =========================================
+     SCROLL LINK
+  ========================================= */
+  
+  .policies-hero__scroll {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.25rem;
+  
+    margin-top: 2.5rem;
+    padding-bottom: 0.65rem;
+  
+    border-bottom: 1px solid var(--color-pink-light);
+  
+    color: var(--color-warm-white);
+    font-family: var(--font-body);
+    font-size: 0.67rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-decoration: none;
+  
+    transition:
+      color 250ms ease,
+      gap 250ms ease,
+      border-color 250ms ease;
+  }
+  
+  .policies-hero__scroll svg {
+    color: var(--color-pink-light);
+    transition: transform 250ms ease;
+  }
+  
+  .policies-hero__scroll:hover {
+    gap: 1.65rem;
+    color: var(--color-pink-light);
+  }
+  
+  .policies-hero__scroll:hover svg {
+    transform: translateY(4px);
+  }
+  
+  .policies-hero__scroll:focus-visible {
+    outline: 2px solid var(--color-pink-light);
+    outline-offset: 5px;
+  }
+  
+  /* =========================================
+     BOTTOM DETAILS
+  ========================================= */
+  
+  .policies-hero__footer {
+    position: absolute;
+    right: var(--page-padding);
+    bottom: 2.5rem;
+    left: var(--page-padding);
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  
+    color: rgba(250, 247, 242, 0.65);
+    font-family: var(--font-body);
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+  }
+  
+  /* =========================================
+     SMALL DESKTOP
+  ========================================= */
+  
+  @media (max-width: 1100px) {
+    .policies-hero__title {
+      font-size: clamp(4rem, 7vw, 6rem);
+    }
+  
+    .policies-hero__content {
+      max-width: 650px;
+    }
+  
+    .policies-hero__description {
+      max-width: 440px;
+      font-size: 0.92rem;
+    }
+  }
+  
+  /* =========================================
+     TABLET
+  ========================================= */
+  
+  @media (max-width: 800px) {
+    .policies-hero {
+      background-position: 58% center;
+    }
+  
+    .policies-hero__overlay {
+      background: rgba(10, 9, 9, 0.38);
+    }
+  
+    .policies-hero__container {
+      padding-top: 9rem;
+      padding-bottom: 7rem;
+    }
+  
+    .policies-hero__title {
+      font-size: clamp(3.8rem, 8vw, 5.5rem);
+    }
+  
+    .policies-hero__footer {
+      bottom: 2rem;
+      font-size: 0.55rem;
+    }
+  }
+  
+  /* =========================================
+     MOBILE
+  ========================================= */
+  
+  @media (max-width: 600px) {
+    .policies-hero {
+      min-height: 100svh;
+      background-position: 58% center;
+    }
+  
+    .policies-hero__overlay {
+      background: rgba(10, 9, 9, 0.45);
+    }
+  
+    .policies-hero__container {
+      min-height: 100svh;
+  
+      padding:
+        8rem
+        var(--page-padding)
+        6.5rem;
+    }
+  
+    .policies-hero__eyebrow {
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.58rem;
+      letter-spacing: 0.15em;
+    }
+  
+    .policies-hero__eyebrow::before {
+      width: 25px;
+    }
+  
+    .policies-hero__title {
+      font-size: clamp(3.3rem, 11vw, 5rem);
+      line-height: 1.05;
+    }
+  
+    .policies-hero__description {
+      max-width: 380px;
+      margin-top: 1.75rem;
+  
+      font-size: 0.88rem;
+      line-height: 1.8;
+    }
+  
+    .policies-hero__scroll {
+      margin-top: 2rem;
+      font-size: 0.61rem;
+    }
+  
+    .policies-hero__footer {
+      bottom: 1.75rem;
+      font-size: 0.5rem;
+    }
+  
+    .policies-hero__footer span:last-child {
+      display: none;
+    }
+  }
+  
+  /* =========================================
+     SMALL MOBILE
+  ========================================= */
+  
+  @media (max-width: 380px) {
+    .policies-hero__title {
+      font-size: clamp(2.9rem, 10.5vw, 3.5rem);
+    }
+  
+    .policies-hero__description {
+      font-size: 0.83rem;
+    }
+  }
+  
+  /* =========================================
+     REDUCED MOTION
+  ========================================= */
+  
+  @media (prefers-reduced-motion: reduce) {
+    .policies-hero__scroll,
+    .policies-hero__scroll svg {
+      transition: none;
+    }
+  }
+  

@@ -1,0 +1,331 @@
+
+/* =========================================
+   LOOKBOOK HERO
+========================================= */
+
+.lookbook-hero {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: clamp(600px, 52vw, 780px);
+    overflow: hidden;
+    background: var(--color-black);
+    color: var(--color-cream);
+  }
+  
+  /* =========================================
+     BACKGROUND IMAGE
+  ========================================= */
+  
+  .lookbook-hero__background {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+  }
+  
+  .lookbook-hero__background img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+  
+  /* Subtle dark wash to integrate image and text */
+  
+  .lookbook-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(
+      90deg,
+      rgba(24, 21, 20, 0) 0%,
+      rgba(24, 21, 20, 0.02) 35%,
+      rgba(24, 21, 20, 0.35) 56%,
+      rgba(24, 21, 20, 0.72) 100%
+    );
+  }
+  
+  /* =========================================
+     CONTAINER
+  ========================================= */
+  
+  .lookbook-hero__container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    min-height: inherit;
+    padding-top: clamp(8rem, 12vw, 11rem);
+    padding-bottom: clamp(5rem, 8vw, 8rem);
+  }
+  
+  /* =========================================
+     CONTENT
+  ========================================= */
+  
+  .lookbook-hero__content {
+    width: 100%;
+    max-width: 510px;
+    margin-left: auto;
+  }
+  
+  /* =========================================
+     EYEBROW
+  ========================================= */
+  
+  .lookbook-hero__eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 1.75rem;
+    color: var(--color-pink-light);
+    font-family: var(--font-body);
+    font-size: 0.67rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+  }
+  
+  .lookbook-hero__eyebrow-line {
+    width: 30px;
+    height: 1px;
+    background: var(--color-pink-light);
+  }
+  
+  /* =========================================
+     HEADING
+  ========================================= */
+  
+  .lookbook-hero__title {
+    margin: 0;
+    color: var(--color-cream);
+    font-family: var(--font-display);
+    font-size: clamp(4.5rem, 6vw, 7rem);
+    font-weight: 400;
+    line-height: 1.03;
+    letter-spacing: -0.065em;
+  }
+  
+  .lookbook-hero__title em {
+    display: block;
+    color: var(--color-pink-light);
+    font-style: italic;
+    font-weight: 400;
+  }
+  
+  /* =========================================
+     DESCRIPTION
+  ========================================= */
+  
+  .lookbook-hero__description {
+    max-width: 400px;
+    margin: 1.75rem 0 0;
+    color: #d5c8ba;
+    font-family: var(--font-body);
+    font-size: clamp(0.9rem, 1vw, 1rem);
+    font-weight: 400;
+    line-height: 1.85;
+  }
+  
+  /* =========================================
+     SCROLL LINK
+  ========================================= */
+  
+  .lookbook-hero__scroll {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-top: 2.25rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid var(--color-pink);
+    color: var(--color-cream);
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-decoration: none;
+    transition:
+      color 250ms ease,
+      gap 250ms ease;
+  }
+  
+  .lookbook-hero__scroll svg {
+    color: var(--color-pink-light);
+  }
+  
+  .lookbook-hero__scroll:hover {
+    gap: 1.65rem;
+    color: var(--color-pink-light);
+  }
+  
+  .lookbook-hero__scroll:focus-visible {
+    outline: 2px solid var(--color-pink-light);
+    outline-offset: 5px;
+  }
+  
+  /* =========================================
+     SMALL SIGNATURE
+  ========================================= */
+  
+  .lookbook-hero__signature {
+    position: absolute;
+    right: var(--page-padding);
+    bottom: 2rem;
+    z-index: 1;
+    color: rgba(245, 240, 233, 0.5);
+    font-family: var(--font-body);
+    font-size: 0.55rem;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+  }
+  
+  /* =========================================
+     TABLET
+  ========================================= */
+  
+  @media (max-width: 1100px) {
+    .lookbook-hero {
+      min-height: 650px;
+    }
+  
+    .lookbook-hero__content {
+      max-width: 440px;
+    }
+  
+    .lookbook-hero__title {
+      font-size: clamp(4rem, 7vw, 5.5rem);
+    }
+  
+    .lookbook-hero__background img {
+      object-position: 42% center;
+    }
+  
+    .lookbook-hero::before {
+      background: linear-gradient(
+        90deg,
+        rgba(24, 21, 20, 0.04) 0%,
+        rgba(24, 21, 20, 0.2) 38%,
+        rgba(24, 21, 20, 0.65) 100%
+      );
+    }
+  }
+  
+  /* =========================================
+     MOBILE
+  ========================================= */
+  
+  @media (max-width: 700px) {
+    .lookbook-hero {
+      align-items: flex-end;
+      min-height: 100svh;
+
+    }
+  
+    .lookbook-hero__background img {
+      object-position: 32% center;
+    }
+  
+    /*
+      Keep the hair visible in the upper portion
+      while transitioning into a dark text area.
+    */
+  
+    .lookbook-hero::before {
+      background: linear-gradient(
+        180deg,
+        rgba(24, 21, 20, 0.06) 0%,
+        rgba(24, 21, 20, 0.04) 28%,
+        rgba(24, 21, 20, 0.52) 49%,
+        rgba(24, 21, 20, 0.94) 72%,
+        var(--color-black) 100%
+      );
+    }
+  
+    .lookbook-hero__container {
+      align-items: flex-end;
+      justify-content: flex-start;
+      min-height: 100svh;
+      padding-top: 7rem;
+      padding-bottom: 4rem;
+    }
+  
+    .lookbook-hero__content {
+      max-width: 500px;
+      margin: 0;
+    }
+  
+    .lookbook-hero__eyebrow {
+      margin-bottom: 1.25rem;
+      font-size: 0.6rem;
+    }
+  
+    .lookbook-hero__title {
+      font-size: clamp(3.75rem, 12vw, 5.5rem);
+      line-height: 1.05;
+    }
+  
+    .lookbook-hero__description {
+      max-width: 360px;
+      margin-top: 1.25rem;
+      font-size: 0.9rem;
+      line-height: 1.75;
+    }
+  
+    .lookbook-hero__scroll {
+      margin-top: 1.75rem;
+      font-size: 0.62rem;
+    }
+  
+    .lookbook-hero__signature {
+      right: auto;
+      left: var(--page-padding);
+      bottom: 1.5rem;
+      font-size: 0.48rem;
+    }
+  }
+  
+  /* =========================================
+     SMALL MOBILE
+  ========================================= */
+  
+  @media (max-width: 480px) {
+    .lookbook-hero {
+      min-height: 680px;
+    }
+  
+    .lookbook-hero__container {
+      padding-top: 20rem;
+      padding-bottom: 5.5rem;
+    }
+  
+    .lookbook-hero__title {
+      font-size: clamp(3.5rem, 13vw, 4.5rem);
+    }
+  
+    .lookbook-hero__description {
+      max-width: 310px;
+      font-size: 0.86rem;
+    }
+  
+    .lookbook-hero__background img {
+      object-position: 28% center;
+    }
+  }
+  
+  /* =========================================
+     REDUCED MOTION
+  ========================================= */
+  
+  @media (prefers-reduced-motion: reduce) {
+    .lookbook-hero__scroll {
+      transition: none;
+    }
+  }
+  

@@ -1,0 +1,258 @@
+
+/* =========================================
+   HOME INTRO
+   Monochromatic botanical editorial
+========================================= */
+
+.home-intro {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  min-height: 440px;
+  padding: clamp(5rem, 7vw, 7rem) 0;
+
+  background: #b98b91;
+  color: var(--color-cream);
+}
+
+/* =========================================
+   PHOTOGRAPHIC BACKGROUND
+========================================= */
+
+.home-intro__background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(74, 38, 43, 0.24) 0%,
+      rgba(74, 38, 43, 0.34) 50%,
+      rgba(74, 38, 43, 0.24) 100%
+    ),
+    var(--home-intro-image);
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  pointer-events: none;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.home-intro__container {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.home-intro__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  max-width: 760px;
+
+  text-align: center;
+}
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.home-intro__eyebrow {
+  display: block;
+  margin-bottom: 1.75rem;
+
+  color: rgba(255, 245, 239, 0.85);
+
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.home-intro__title {
+  margin: 0;
+
+  color: var(--color-cream);
+  font-family: var(--font-display);
+  font-size: clamp(3.25rem, 5.5vw, 6rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+}
+
+.home-intro__title em {
+  display: block;
+  color: var(--color-cream);
+  font-weight: 400;
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.home-intro__description {
+  max-width: 530px;
+  margin: 1.75rem 0 0;
+
+  color: rgba(255, 245, 239, 0.92);
+
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  line-height: 1.85;
+}
+
+/* =========================================
+   EDITORIAL LINK
+========================================= */
+
+.home-intro__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  margin-top: 2rem;
+  padding-bottom: 0.65rem;
+
+  border-bottom: 1px solid rgba(255, 245, 239, 0.8);
+  color: var(--color-cream);
+
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition:
+    gap 250ms ease,
+    border-color 250ms ease,
+    color 250ms ease;
+}
+
+.home-intro__link:hover {
+  gap: 2rem;
+  border-color: #fff;
+  color: #fff;
+}
+
+.home-intro__link:focus-visible {
+  outline: 2px solid var(--color-cream);
+  outline-offset: 5px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+  .home-intro {
+    min-height: 400px;
+    padding: 5rem 0;
+  }
+
+  .home-intro__content {
+    max-width: 680px;
+  }
+
+  .home-intro__title {
+    font-size: clamp(3rem, 6vw, 4.75rem);
+  }
+
+  .home-intro__background {
+    background-position: center;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .home-intro {
+    min-height: 390px;
+    padding: 4.5rem 0;
+  }
+
+  .home-intro__eyebrow {
+    margin-bottom: 1.5rem;
+    font-size: 0.56rem;
+    letter-spacing: 0.14em;
+  }
+
+  .home-intro__title {
+    font-size: clamp(2.75rem, 9vw, 3.75rem);
+  }
+
+  .home-intro__description {
+    max-width: 420px;
+    margin-top: 1.5rem;
+    font-size: 0.88rem;
+    line-height: 1.8;
+  }
+
+  .home-intro__link {
+    margin-top: 1.75rem;
+    font-size: 0.63rem;
+  }
+
+  .home-intro__background {
+    background-image:
+      linear-gradient(
+        rgba(74, 38, 43, 0.38),
+        rgba(74, 38, 43, 0.38)
+      ),
+      var(--home-intro-image);
+
+    background-position: center;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+  .home-intro {
+    padding: 4rem 0;
+  }
+
+  .home-intro__title {
+    font-size: 2.55rem;
+  }
+
+  .home-intro__description {
+    font-size: 0.85rem;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .home-intro__link {
+    transition: none;
+  }
+}

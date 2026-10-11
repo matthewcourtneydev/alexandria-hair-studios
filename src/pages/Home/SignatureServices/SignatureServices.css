@@ -1,0 +1,336 @@
+/* =========================================
+   SIGNATURE SERVICES
+   Minimal editorial service collection
+========================================= */
+
+.signature-services {
+  position: relative;
+  padding: clamp(3.5rem, 5vw, 5.5rem) 0 clamp(2.75rem, 4vw, 4rem);
+  background: var(--color-cream);
+  color: var(--color-text);
+}
+
+.signature-services__container {
+  width: 100%;
+}
+
+/* =========================================
+   HEADER LAYOUT
+========================================= */
+
+.signature-services__header {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 0.5fr)
+    minmax(0, 1fr);
+  align-items: center;
+  column-gap: clamp(2rem, 4vw, 4rem);
+  margin-bottom: clamp(1.75rem, 2.5vw, 2.5rem);
+}
+
+.signature-services__heading {
+  min-width: 0;
+}
+
+.signature-services__eyebrow {
+  display: block;
+  margin-bottom: 0.85rem;
+
+  color: var(--color-pink-dark);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.signature-services__heading h2 {
+  margin: 0;
+
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 4.5vw, 5.25rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.055em;
+}
+
+.signature-services__heading h2 em {
+  color: var(--color-pink-dark);
+  font-weight: 400;
+}
+
+/* =========================================
+   HEADER ASIDE
+========================================= */
+
+.signature-services__header-aside {
+  width: 100%;
+  max-width: 850px;
+  min-width: 0;
+  justify-self: start;
+}
+
+.signature-services__header-aside p {
+  margin: 0;
+  color: #71665f;
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.signature-services__header-aside p + p {
+  margin-top: 0.4rem;
+}
+
+.signature-services__header-aside .signature-services__aside-lead {
+  margin: 0 0 0.65rem;
+
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+  line-height: 1.35;
+  letter-spacing: -0.025em;
+}
+
+/* =========================================
+   SERVICE GRID
+========================================= */
+
+.signature-services__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.85rem, 1.4vw, 1.5rem);
+}
+
+.signature-services__item {
+  min-width: 0;
+}
+
+/* =========================================
+   SERVICE PHOTOGRAPHY
+========================================= */
+
+.signature-services__image-link {
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.signature-services__image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--color-tan-light);
+}
+
+.signature-services__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 650ms ease;
+}
+
+.signature-services__image-link:hover img {
+  transform: scale(1.035);
+}
+
+.signature-services__placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  background: #e9dfd5;
+  color: rgba(33, 28, 26, 0.25);
+
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 4rem);
+}
+
+/* =========================================
+   SERVICE DETAILS
+========================================= */
+
+.signature-services__item-content {
+  padding-top: 1.25rem;
+}
+
+.signature-services__item-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  margin-bottom: 0.65rem;
+}
+
+.signature-services__number {
+  flex-shrink: 0;
+
+  color: var(--color-pink-dark);
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+}
+
+.signature-services__item-heading h3 {
+  margin: 0;
+
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2vw, 2.25rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.signature-services__item-heading h3 a {
+  color: inherit;
+  text-decoration: none;
+
+  transition: color 200ms ease;
+}
+
+.signature-services__item-heading h3 a:hover {
+  color: var(--color-pink-dark);
+}
+
+.signature-services__item-content p {
+  max-width: 290px;
+  margin: 0 0 0 1.75rem;
+
+  color: #766b64;
+  font-size: 0.83rem;
+  line-height: 1.7;
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+.signature-services a:focus-visible {
+  outline: 2px solid var(--color-pink-dark);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .signature-services__header {
+    grid-template-columns:
+      minmax(0, 0.85fr)
+      minmax(0, 1fr);
+    column-gap: 2rem;
+  }
+
+  .signature-services__heading h2 {
+    font-size: clamp(2.75rem, 5vw, 4.5rem);
+  }
+
+  .signature-services__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 3rem 1.5rem;
+  }
+
+  .signature-services__item-heading h3 {
+    font-size: clamp(1.65rem, 2.5vw, 2rem);
+  }
+}
+
+/* =========================================
+   MOBILE / SMALL TABLET
+========================================= */
+
+@media (max-width: 768px) {
+  .signature-services {
+    padding: 4rem 0;
+  }
+
+  .signature-services__header {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .signature-services__header-aside {
+    max-width: 540px;
+  }
+
+  .signature-services__eyebrow {
+    margin-bottom: 0.85rem;
+    font-size: 0.6rem;
+  }
+
+  .signature-services__heading h2 {
+    font-size: clamp(2.6rem, 7vw, 3.75rem);
+  }
+
+  .signature-services__header-aside p {
+    font-size: 0.9rem;
+  }
+
+  .signature-services__header-aside .signature-services__aside-lead {
+    font-size: 1.25rem;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .signature-services {
+    padding: 3.5rem 0;
+  }
+
+  .signature-services__heading h2 {
+    font-size: clamp(2.5rem, 9vw, 3rem);
+  }
+
+  .signature-services__header {
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .signature-services__grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+
+  .signature-services__image {
+    aspect-ratio: 5 / 4;
+  }
+
+  .signature-services__item-content {
+    padding-top: 1rem;
+  }
+
+  .signature-services__item-heading {
+    margin-bottom: 0.5rem;
+  }
+
+  .signature-services__item-heading h3 {
+    font-size: 1.8rem;
+  }
+
+  .signature-services__item-content p {
+    max-width: 400px;
+    margin-left: 1.75rem;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .signature-services__image img,
+  .signature-services__item-heading h3 a {
+    transition: none;
+  }
+
+  .signature-services__image-link:hover img {
+    transform: none;
+  }
+}

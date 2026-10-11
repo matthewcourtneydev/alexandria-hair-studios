@@ -1,0 +1,241 @@
+/* =========================================
+   ABOUT APPROACH — FAMILY ROOTS
+========================================= */
+
+.about-approach {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 610px;
+    overflow: hidden;
+  
+    background-color: #e8d5c1;
+    background-image: url('../../../assets/images/scrapbook.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  
+    color: var(--color-black);
+  }
+  
+  /* =========================================
+     CONTAINER
+  ========================================= */
+  
+  .about-approach__container {
+    position: relative;
+    z-index: 1;
+  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  
+    width: 100%;
+    max-width: var(--max-width);
+    min-height: inherit;
+    margin: 0 auto;
+    padding:
+      clamp(5rem, 8vw, 8rem)
+      var(--page-padding);
+  }
+  
+  /* =========================================
+     CONTENT — RIGHT
+  ========================================= */
+  
+  .about-approach__content {
+    grid-column: 2;
+    justify-self: end;
+  
+    width: 100%;
+    max-width: 510px;
+    padding-left: clamp(1rem, 3vw, 3rem);
+  }
+  
+  .about-approach__eyebrow {
+    display: block;
+    margin-bottom: 1.5rem;
+  
+    color: var(--color-pink-dark);
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+  }
+  
+  .about-approach__title {
+    margin: 0;
+  
+    color: var(--color-black);
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 5vw, 5.75rem);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.055em;
+  }
+  
+  .about-approach__title span {
+    display: block;
+  
+    color: var(--color-pink-dark);
+    font-style: italic;
+    font-weight: 400;
+  }
+  
+  /* =========================================
+     BODY COPY
+  ========================================= */
+  
+  .about-approach__copy {
+    max-width: 440px;
+    margin-top: 1.75rem;
+  }
+  
+  .about-approach__copy p {
+    margin: 0;
+  
+    color: #51443e;
+    font-family: var(--font-body);
+    font-size: 0.94rem;
+    line-height: 1.85;
+  }
+  
+  .about-approach__copy p + p {
+    margin-top: 1.25rem;
+  }
+  
+  /* =========================================
+     CLOSING DETAIL
+  ========================================= */
+  
+  .about-approach__closing {
+    display: block;
+    max-width: 400px;
+    margin-top: 2rem;
+    padding-top: 1.25rem;
+  
+    border-top: 1px solid rgba(64, 48, 41, 0.2);
+  
+    color: #78635b;
+    font-family: var(--font-display);
+    font-size: clamp(1rem, 1.4vw, 1.3rem);
+    font-style: italic;
+    line-height: 1.5;
+  }
+  
+  /* =========================================
+     TABLET
+  ========================================= */
+  
+  @media (max-width: 1100px) {
+    .about-approach {
+      min-height: 560px;
+      background-position: 43% center;
+    }
+  
+    .about-approach__container {
+      grid-template-columns: 48% 52%;
+    }
+  
+    .about-approach__content {
+      padding-left: 1.5rem;
+    }
+  
+    .about-approach__title {
+      font-size: clamp(3.2rem, 5vw, 4.5rem);
+    }
+  
+    .about-approach__copy p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* =========================================
+     MOBILE
+  ========================================= */
+  
+  @media (max-width: 767px) {
+    .about-approach {
+      display: block;
+      min-height: auto;
+  
+      /*
+        Preserve the scrapbook as a separate visual
+        rather than putting text over the photographs.
+      */
+      background-image: none;
+      background-color: #e8d5c1;
+    }
+  
+    .about-approach::before {
+      content: '';
+      display: block;
+  
+      width: 100%;
+      height: clamp(260px, 72vw, 430px);
+  
+      background-image: url('../../../images/scrapbook.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: left center;
+    }
+  
+    .about-approach__container {
+      display: block;
+      min-height: auto;
+  
+      padding:
+        3.5rem
+        var(--page-padding)
+        4.5rem;
+    }
+  
+    .about-approach__content {
+      max-width: 560px;
+      padding-left: 0;
+    }
+  
+    .about-approach__eyebrow {
+      margin-bottom: 1.25rem;
+      font-size: 0.6rem;
+    }
+  
+    .about-approach__title {
+      font-size: clamp(3.25rem, 11vw, 4.5rem);
+    }
+  
+    .about-approach__copy {
+      margin-top: 1.5rem;
+    }
+  
+    .about-approach__copy p {
+      font-size: 0.9rem;
+      line-height: 1.8;
+    }
+  
+    .about-approach__closing {
+      margin-top: 1.75rem;
+      font-size: 1.1rem;
+    }
+  }
+  
+  /* =========================================
+     SMALL MOBILE
+  ========================================= */
+  
+  @media (max-width: 420px) {
+    .about-approach::before {
+      height: 270px;
+    }
+  
+    .about-approach__container {
+      padding-top: 3rem;
+      padding-bottom: 4rem;
+    }
+  
+    .about-approach__title {
+      font-size: clamp(3rem, 11vw, 3.75rem);
+    }
+  }

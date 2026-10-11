@@ -1,0 +1,596 @@
+/* SERVICES â€” clean editorial layout */
+.service-menu {
+  position: relative;
+  padding: clamp(3.5rem, 5vw, 5rem) var(--page-padding) clamp(5rem, 8vw, 8rem);
+
+  background: var(--color-warm-white);
+  color: var(--color-black);
+  scroll-margin-top: 5rem;
+}
+
+.service-menu__container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+.service-menu__header {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: end;
+  gap: 3rem;
+  margin-bottom: clamp(2rem, 3vw, 3rem);
+}
+
+.service-menu__eyebrow,
+.service-modal__eyebrow {
+  display: block;
+  margin-bottom: 1.15rem;
+  color: var(--color-pink-dark);
+  font-family: var(--font-body);
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+}
+
+.service-menu__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 3.8vw, 4.4rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.055em;
+}
+
+.service-menu__title em {
+  color: var(--color-pink-dark);
+  font-weight: 400;
+}
+
+.service-menu__intro {
+  max-width: 440px;
+}
+.service-menu__intro p {
+  margin: 0 0 1.3rem;
+  color: #62564f;
+  font-family: var(--font-body);
+  font-size: 0.94rem;
+  line-height: 1.8;
+}
+
+.service-menu__text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-pink-dark);
+  color: var(--color-black);
+  font-family: var(--font-body);
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  transition: color 200ms ease, gap 200ms ease;
+}
+.service-menu__text-link:hover {
+  color: var(--color-pink-dark);
+  gap: 1.35rem;
+}
+.service-menu__text-link:focus-visible,
+.service-menu__card:focus-visible,
+.service-modal__close:focus-visible,
+.service-modal__booking:focus-visible {
+  outline: 2px solid var(--color-pink-dark);
+  outline-offset: 4px;
+}
+
+.service-menu__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1rem, 1.6vw, 1.75rem);
+}
+
+.service-menu__card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  appearance: none;
+}
+
+.service-menu__card-image {
+  flex-shrink: 0;
+  width: 100%;
+  aspect-ratio: 0.83;
+  overflow: hidden;
+  background: var(--color-tan-light);
+}
+.service-menu__card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+.service-menu__card:hover .service-menu__card-image img {
+  transform: scale(1.045);
+}
+.service-menu__image-placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background: #d5c8ba;
+  color: rgba(255, 255, 255, 0.65);
+  font-family: var(--font-display);
+  font-size: 3rem;
+}
+
+.service-menu__card-body {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr);
+  gap: 0.55rem;
+  flex: 1;
+  padding: 1.2rem 0 0;
+}
+.service-menu__card-number {
+  padding-top: 0.35rem;
+  color: var(--color-pink-dark);
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+}
+.service-menu__card-copy {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+.service-menu__card-copy h3 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 1.8vw, 1.9rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+}
+
+.service-menu__card-copy p {
+  margin: 0;
+  color: #62564f;
+  font-family: var(--font-body);
+  font-size: 0.83rem;
+  line-height: 1.65;
+}
+.service-menu__card-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-bottom: 0;
+  border-top: 0;
+  color: var(--color-pink-dark);
+  font-family: var(--font-body);
+  font-size: 0.63rem;
+  font-weight: 600;
+  letter-spacing: 0.11em;
+}
+
+.service-menu__card-action::before {
+  content: none;
+}
+.service-menu__card-action svg {
+  flex-shrink: 0;
+  transition: transform 200ms ease;
+}
+.service-menu__card:hover .service-menu__card-action svg {
+  transform: translate(2px, -2px);
+}
+.service-menu__disclaimer {
+  max-width: 600px;
+  margin: 2.5rem 0 0 auto;
+  color: #89776d;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  line-height: 1.7;
+  text-align: right;
+}
+
+/* MODAL â€” minimal cream panel, integrated photograph */
+.service-modal__backdrop {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  overflow-y: auto;
+  background: rgba(18, 16, 15, 0.78);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  animation: serviceFade 220ms ease both;
+}
+.service-modal {
+  position: relative;
+  width: min(100%, 980px);
+  max-height: calc(100dvh - 4rem);
+  overflow-y: auto;
+  background: var(--color-cream);
+  color: var(--color-black);
+  box-shadow: 0 25px 90px rgba(0, 0, 0, 0.22);
+  animation: serviceEnter 280ms ease both;
+}
+.service-modal:focus {
+  outline: none;
+}
+.service-modal__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(230px, 0.75fr);
+  min-height: 530px;
+}
+.service-modal__main {
+  min-width: 0;
+  padding: clamp(2rem, 4vw, 3.5rem);
+}
+.service-modal__close {
+  position: absolute;
+  z-index: 5;
+  top: 1rem;
+  right: 1rem;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border: 0;
+  background: var(--color-cream);
+  color: var(--color-black);
+  cursor: pointer;
+  transition: color 200ms ease;
+}
+.service-modal__close:hover {
+  color: var(--color-pink-dark);
+}
+.service-modal__eyebrow {
+  margin-bottom: 1rem;
+}
+.service-modal__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 3.7vw, 4rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.055em;
+}
+.service-modal__title span {
+  color: var(--color-pink-dark);
+}
+.service-modal__description {
+  max-width: 480px;
+  margin: 1rem 0 0;
+  color: #62564f;
+  font-family: var(--font-body);
+  font-size: 0.91rem;
+  line-height: 1.75;
+}
+.service-modal__content {
+  margin-top: 2.3rem;
+}
+.service-modal__section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid rgba(24, 21, 20, 0.32);
+  color: var(--color-pink-dark);
+  font-family: var(--font-body);
+  font-size: 0.63rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+}
+.service-modal__service {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(24, 21, 20, 0.12);
+}
+.service-modal__service-info {
+  min-width: 0;
+}
+.service-modal__service-info h3 {
+  margin: 0 0 0.3rem;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+.service-modal__service-info p {
+  margin: 0;
+  color: #76675e;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  line-height: 1.55;
+}
+.service-modal__service-price {
+  flex-shrink: 0;
+  color: var(--color-black);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+.service-modal__footer {
+  margin-top: 1.8rem;
+}
+.service-modal__footer p {
+  max-width: 470px;
+  margin: 0 0 1.3rem;
+  color: #89776d;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+.service-modal__booking {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  min-height: 46px;
+  padding: 0.85rem 1.2rem;
+  background: var(--color-pink);
+  color: var(--color-black);
+  font-family: var(--font-body);
+  font-size: 0.67rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: background-color 200ms ease;
+}
+.service-modal__booking:hover {
+  background: var(--color-pink-light);
+}
+.service-modal__photo {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+  background: var(--color-tan-light);
+}
+.service-modal__photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.service-modal__photo::after {
+  content: "";
+  position: absolute;
+  inset: 50% 0 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.35));
+  pointer-events: none;
+}
+.service-modal__photo span {
+  position: absolute;
+  z-index: 1;
+  right: 1.3rem;
+  bottom: 1.3rem;
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.57rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+}
+@keyframes serviceFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes serviceEnter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1100px) {
+  .service-menu__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem 1.5rem;
+    align-items: stretch;
+  }
+
+  .service-menu__card-image {
+    aspect-ratio: 1.05;
+  }
+}
+@media (max-width: 760px) {
+  .service-menu__header {
+    grid-template-columns: 1fr;
+    gap: 1.3rem;
+  }
+
+  .service-menu__title {
+    font-size: clamp(2.5rem, 7vw, 3.7rem);
+  }
+
+  .service-menu__grid {
+    gap: 2rem 1.25rem;
+  }
+  .service-modal__backdrop {
+    padding: 1rem;
+  }
+  .service-modal {
+    max-height: calc(100dvh - 2rem);
+  }
+  .service-modal__layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .service-modal__main {
+    padding: 2.4rem 1.5rem 2rem;
+  }
+  .service-modal__photo {
+    display: none;
+  }
+  .service-modal__close {
+    top: 0.6rem;
+    right: 0.6rem;
+  }
+  .service-modal__title {
+    font-size: clamp(2.4rem, 8vw, 3.4rem);
+  }
+  .service-modal__content {
+    margin-top: 1.7rem;
+  }
+}
+@media (max-width: 540px) {
+  .service-menu {
+    padding-top: 3.25rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .service-menu__header {
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .service-menu__intro p {
+    margin-bottom: 0.9rem;
+    font-size: 0.85rem;
+    line-height: 1.65;
+  }
+
+  .service-menu__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 0.9rem;
+    row-gap: 2.25rem;
+    align-items: stretch;
+  }
+
+  .service-menu__card-image {
+    aspect-ratio: 0.85;
+  }
+
+  .service-menu__card-body {
+    grid-template-columns: 15px minmax(0, 1fr);
+    gap: 0.35rem;
+    padding-top: 0.85rem;
+  }
+
+  .service-menu__card-number {
+    padding-top: 0.25rem;
+    font-size: 0.52rem;
+  }
+
+  .service-menu__card-copy h3 {
+    margin-bottom: 0.4rem;
+    font-size: clamp(1.1rem, 4.5vw, 1.4rem);
+    line-height: 1.18;
+    letter-spacing: -0.035em;
+  }
+
+  .service-menu__card-copy p {
+    font-size: 0.75rem;
+    line-height: 1.55;
+  }
+
+  .service-menu__card-action {
+    gap: 0.35rem;
+    margin-top: auto;
+    padding-top: 1rem;
+    font-size: 0.54rem;
+    letter-spacing: 0.07em;
+  }
+
+  .service-menu__card-action svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .service-menu__disclaimer {
+    margin-top: 2rem;
+    font-size: 0.68rem;
+    text-align: left;
+  }
+  .service-menu__disclaimer {
+    text-align: left;
+  }
+  .service-modal__backdrop {
+    padding: 0.75rem;
+  }
+  .service-modal {
+    max-height: calc(100dvh - 1.5rem);
+  }
+  .service-modal__main {
+    padding: 2.2rem 1.2rem 1.5rem;
+  }
+  .service-modal__service {
+    gap: 0.8rem;
+  }
+  .service-modal__service-info h3 {
+    font-size: 1.15rem;
+  }
+  .service-modal__service-price {
+    font-size: 1.05rem;
+  }
+  .service-modal__booking {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .service-menu__grid {
+    column-gap: 0.7rem;
+  }
+
+  .service-menu__card-body {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .service-menu__card-number {
+    padding: 0;
+  }
+
+  .service-menu__card-copy h3 {
+    font-size: 1.08rem;
+  }
+
+  .service-menu__card-copy p {
+    font-size: 0.72rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-menu__card-image img,
+  .service-menu__card-action svg,
+  .service-menu__text-link,
+  .service-modal__close,
+  .service-modal__booking {
+    transition: none;
+  }
+  .service-modal,
+  .service-modal__backdrop {
+    animation: none;
+  }
+}

@@ -1,0 +1,385 @@
+
+/* =========================================
+   HOME HERO
+========================================= */
+
+.home-hero {
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  align-items: center;
+
+  min-height: 780px;
+  min-height: 100svh;
+  overflow: hidden;
+
+  background: var(--color-black);
+  color: var(--color-warm-white);
+}
+
+/* =========================================
+   HERO PHOTOGRAPHY
+========================================= */
+
+.home-hero__image {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+/* =========================================
+   ATMOSPHERIC OVERLAY
+========================================= */
+
+.home-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(12, 10, 10, 0.88) 0%,
+      rgba(12, 10, 10, 0.65) 30%,
+      rgba(12, 10, 10, 0.22) 62%,
+      rgba(12, 10, 10, 0.08) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(12, 10, 10, 0.35) 0%,
+      transparent 28%,
+      transparent 70%,
+      rgba(12, 10, 10, 0.55) 100%
+    );
+}
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.home-hero__content {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+
+.home-hero__copy {
+  position: relative;
+  z-index: 2;
+
+  width: min(100%, 1050px);
+}
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.home-hero__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  margin-bottom: 2.5rem;
+
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+}
+
+.home-hero__eyebrow-line {
+  display: block;
+  flex-shrink: 0;
+
+  width: 36px;
+  height: 1px;
+
+  background: var(--color-pink);
+}
+
+/* =========================================
+   HEADLINE
+========================================= */
+
+.home-hero__title {
+  margin: 0;
+
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 7.4vw, 9rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+.home-hero__title span {
+  display: block;
+}
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.home-hero__subtitle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem;
+
+  margin: 2.5rem 0 0;
+
+  font-family: var(--font-body);
+  font-size: clamp(0.7rem, 1vw, 0.9rem);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+}
+
+.home-hero__subtitle span {
+  color: var(--color-pink);
+  font-size: 0.7rem;
+}
+
+/* =========================================
+   BOOKING BUTTON
+========================================= */
+
+.home-hero__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+
+  min-width: 280px;
+  margin-top: 2.25rem;
+  padding: 1.25rem 1.5rem;
+
+  background: var(--color-pink);
+  color: var(--color-black);
+
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition:
+    background-color 250ms ease,
+    transform 250ms ease;
+}
+
+.home-hero__button:hover {
+  background: var(--color-pink-light);
+  transform: translateY(-3px);
+}
+
+.home-hero__button:focus-visible {
+  outline: 2px solid var(--color-warm-white);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   SIDE TEXT
+========================================= */
+
+.home-hero__side-text {
+  position: absolute;
+
+  right: var(--page-padding);
+  top: 50%;
+
+  transform: translateY(-20%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.16em;
+}
+
+.home-hero__side-line {
+  width: 1px;
+  height: 70px;
+  margin: 1.5rem auto 0;
+
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* =========================================
+   SCROLL INDICATOR
+========================================= */
+
+.home-hero__scroll {
+  position: absolute;
+
+  bottom: -35px;
+  left: var(--page-padding);
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  color: var(--color-warm-white);
+
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-decoration: none;
+
+  transition: color 250ms ease;
+}
+
+.home-hero__scroll svg {
+  color: var(--color-pink);
+}
+
+.home-hero__scroll:hover {
+  color: var(--color-pink-light);
+}
+
+.home-hero__scroll:focus-visible {
+  outline: 2px solid var(--color-pink-light);
+  outline-offset: 5px;
+}
+
+/* =========================================
+   HERO INDEX
+========================================= */
+
+.home-hero__index {
+  position: absolute;
+
+  bottom: 35px;
+  right: var(--page-padding);
+
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  opacity: 0.7;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .home-hero__side-text {
+    display: none;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  .home-hero {
+    min-height: 700px;
+    min-height: 100svh;
+    align-items: flex-end;
+  }
+
+  .home-hero__image {
+    object-position: 62% center;
+  }
+
+  .home-hero__overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(12, 10, 10, 0.35) 0%,
+      rgba(12, 10, 10, 0.08) 25%,
+      rgba(12, 10, 10, 0.45) 50%,
+      rgba(12, 10, 10, 0.95) 100%
+    );
+  }
+
+  .home-hero__content {
+    align-items: flex-end;
+    padding-top: 150px;
+    padding-bottom: 125px;
+  }
+
+  .home-hero__eyebrow {
+    margin-bottom: 1.5rem;
+
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+  }
+
+  .home-hero__title {
+    font-size: clamp(2.6rem, 9vw, 5rem);
+    letter-spacing: -0.06em;
+  }
+
+  .home-hero__subtitle {
+    gap: 0.5rem;
+    margin-top: 1.75rem;
+
+    font-size: 0.65rem;
+    line-height: 1.8;
+    letter-spacing: 0.12em;
+  }
+
+  .home-hero__button {
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .home-hero__scroll {
+    display: none;
+  }
+
+  .home-hero__index {
+    bottom: 25px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+  .home-hero__title {
+    font-size: 2.45rem;
+  }
+
+  .home-hero__eyebrow {
+    letter-spacing: 0.12em;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .home-hero__button,
+  .home-hero__scroll {
+    transition: none;
+  }
+
+  .home-hero__button:hover {
+    transform: none;
+  }
+}

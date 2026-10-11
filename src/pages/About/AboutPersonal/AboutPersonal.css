@@ -1,0 +1,311 @@
+
+/* =========================================
+   ABOUT PERSONAL — BEYOND THE SALON
+========================================= */
+
+.about-personal {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding-block: clamp(5rem, 8vw, 8rem);
+    background: var(--color-cream);
+    color: var(--color-black);
+  }
+  
+  .about-personal__container {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    align-items: center;
+    gap: clamp(3.5rem, 7vw, 8rem);
+  }
+  
+  /* =========================================
+     PHOTO COLLAGE
+  ========================================= */
+  
+  .about-personal__visual {
+    width: 100%;
+    min-width: 0;
+  }
+  
+  .about-personal__collage {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 0.65rem;
+    width: 100%;
+    height: clamp(430px, 42vw, 600px);
+  }
+  
+  .about-personal__image {
+    position: relative;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    background: #c6b5a9;
+  }
+  
+  .about-personal__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 600ms ease;
+  }
+  
+  .about-personal__image:hover img {
+    transform: scale(1.035);
+  }
+  
+  .about-personal__image--main {
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+  
+  .about-personal__image--main img {
+    object-position: center 35%;
+  }
+  
+  .about-personal__image--secondary {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  
+  .about-personal__image--secondary img {
+    object-position: center;
+  }
+  
+  .about-personal__image--detail {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  
+  .about-personal__image--detail img {
+    object-position: center;
+  }
+  
+  /* =========================================
+     CONTENT
+  ========================================= */
+  
+  .about-personal__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .about-personal__eyebrow {
+    display: block;
+    margin-bottom: 1.4rem;
+    color: var(--color-pink-dark);
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  
+  .about-personal__title {
+    margin: 0;
+    max-width: 500px;
+    color: var(--color-black);
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 3.3vw, 3.75rem);
+    font-weight: 400;
+    line-height: 1.16;
+    letter-spacing: -0.045em;
+  }
+  
+  .about-personal__title em {
+    color: var(--color-pink-dark);
+    font-weight: 400;
+  }
+  
+  /* =========================================
+     BODY COPY
+  ========================================= */
+  
+  .about-personal__copy {
+    max-width: 460px;
+    margin-top: 1.75rem;
+  }
+  
+  .about-personal__copy p {
+    margin: 0;
+    color: #6e625c;
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    font-weight: 400;
+    line-height: 1.85;
+  }
+  
+  .about-personal__copy p + p {
+    margin-top: 1.15rem;
+  }
+  
+  .about-personal__copy .about-personal__lead {
+    color: var(--color-black);
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.75;
+  }
+  
+  /* =========================================
+     INSTAGRAM LINK
+  ========================================= */
+  
+  .about-personal__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 2rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid var(--color-pink-dark);
+    color: var(--color-black);
+    font-family: var(--font-body);
+    font-size: 0.66rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    transition: color 200ms ease, gap 200ms ease;
+  }
+  
+  .about-personal__link svg {
+    color: var(--color-pink-dark);
+  }
+  
+  .about-personal__link:hover {
+    gap: 1.05rem;
+    color: var(--color-pink-dark);
+  }
+  
+  .about-personal__link:focus-visible {
+    outline: 2px solid var(--color-pink-dark);
+    outline-offset: 5px;
+  }
+  
+  .about-personal__handle {
+    margin-top: 0.7rem;
+    color: #8b7a72;
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+  }
+  
+  /* =========================================
+     TABLET
+  ========================================= */
+  
+  @media (max-width: 1100px) {
+    .about-personal__container {
+      gap: 3rem;
+    }
+  
+    .about-personal__collage {
+      height: 470px;
+    }
+  
+    .about-personal__title {
+      font-size: clamp(2.2rem, 3.5vw, 3.25rem);
+    }
+  
+    .about-personal__copy p {
+      font-size: 0.89rem;
+    }
+  }
+  
+  /* =========================================
+     SMALL TABLET
+  ========================================= */
+  
+  @media (max-width: 800px) {
+    .about-personal {
+      padding-block: 5rem;
+    }
+  
+    .about-personal__container {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  
+    .about-personal__visual {
+      max-width: 650px;
+      margin: 0 auto;
+    }
+  
+    .about-personal__collage {
+      height: 480px;
+    }
+  
+    .about-personal__content {
+      max-width: 650px;
+    }
+  
+    .about-personal__title {
+      max-width: 620px;
+      font-size: clamp(2.5rem, 5.5vw, 3.5rem);
+    }
+  
+    .about-personal__copy {
+      max-width: 580px;
+    }
+  }
+  
+  /* =========================================
+     MOBILE
+  ========================================= */
+  
+  @media (max-width: 600px) {
+    .about-personal {
+      padding-block: 4.25rem;
+    }
+  
+    .about-personal__container {
+      gap: 2.5rem;
+    }
+  
+    .about-personal__collage {
+      gap: 0.45rem;
+      height: clamp(320px, 95vw, 440px);
+    }
+  
+    .about-personal__eyebrow {
+      margin-bottom: 1rem;
+      font-size: 0.6rem;
+    }
+  
+    .about-personal__title {
+      font-size: clamp(2.35rem, 8vw, 3.1rem);
+    }
+  
+    .about-personal__copy {
+      margin-top: 1.5rem;
+    }
+  
+    .about-personal__copy p {
+      font-size: 0.89rem;
+      line-height: 1.8;
+    }
+  
+    .about-personal__copy p + p {
+      margin-top: 1.1rem;
+    }
+  
+    .about-personal__link {
+      margin-top: 1.75rem;
+      font-size: 0.62rem;
+    }
+  }
+  
+  /* =========================================
+     REDUCED MOTION
+  ========================================= */
+  
+  @media (prefers-reduced-motion: reduce) {
+    .about-personal__image img,
+    .about-personal__link {
+      transition: none;
+    }
+  }
+  

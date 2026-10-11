@@ -1,0 +1,309 @@
+
+/* =========================================
+   ABOUT CTA — FINAL BOOKING BANNER
+========================================= */
+
+.about-cta {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    min-height: 490px;
+    overflow: hidden;
+  
+    display: flex;
+    align-items: center;
+  
+    background: var(--color-black);
+    color: var(--color-cream);
+  }
+  
+  /* =========================================
+     BACKGROUND IMAGE
+  ========================================= */
+  
+  .about-cta__background {
+    position: absolute;
+    z-index: -2;
+    inset: 0;
+  
+    width: 100%;
+    height: 100%;
+  
+    background: #443631;
+  }
+  
+  .about-cta__background img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  
+    object-fit: cover;
+    object-position: center 45%;
+  }
+  
+  /* =========================================
+     DARK GRADIENT
+  ========================================= */
+  
+  .about-cta__overlay {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+  
+    background: linear-gradient(
+      90deg,
+      rgba(24, 21, 20, 0.95) 0%,
+      rgba(24, 21, 20, 0.86) 38%,
+      rgba(24, 21, 20, 0.48) 75%,
+      rgba(24, 21, 20, 0.3) 100%
+    );
+  
+    pointer-events: none;
+  }
+  
+  /* =========================================
+     CONTENT
+  ========================================= */
+  
+  .about-cta__container {
+    position: relative;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  
+    padding:
+      clamp(5rem, 8vw, 8rem)
+      var(--page-padding);
+  }
+  
+  .about-cta__content {
+    position: relative;
+    z-index: 2;
+  
+    max-width: 650px;
+  }
+  
+  .about-cta__eyebrow {
+    display: block;
+    margin-bottom: 1.5rem;
+  
+    color: var(--color-pink-light);
+    font-family: var(--font-body);
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+  }
+  
+  .about-cta__title {
+    margin: 0;
+  
+    color: var(--color-cream);
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 5.5vw, 6.5rem);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.055em;
+  }
+  
+  .about-cta__title span {
+    display: block;
+  
+    color: var(--color-pink-light);
+    font-style: italic;
+    font-weight: 400;
+  }
+  
+  .about-cta__description {
+    max-width: 480px;
+    margin: 1.5rem 0 0;
+  
+    color: rgba(248, 244, 239, 0.82);
+    font-family: var(--font-body);
+    font-size: 0.96rem;
+    line-height: 1.85;
+  }
+  
+  /* =========================================
+     ACTIONS
+  ========================================= */
+  
+  .about-cta__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  
+    margin-top: 2rem;
+  }
+  
+  .about-cta__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+  
+    padding: 1.1rem 1.5rem;
+  
+    border: 1px solid var(--color-pink);
+    background: var(--color-pink);
+  
+    color: var(--color-black);
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-decoration: none;
+  
+    transition:
+      background-color 250ms ease,
+      border-color 250ms ease,
+      transform 250ms ease;
+  }
+  
+  .about-cta__button:hover {
+    background: var(--color-pink-light);
+    border-color: var(--color-pink-light);
+    transform: translateY(-2px);
+  }
+  
+  .about-cta__secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.85rem;
+  
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid var(--color-pink-light);
+  
+    color: var(--color-cream);
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    text-decoration: none;
+  
+    transition:
+      color 200ms ease,
+      gap 200ms ease;
+  }
+  
+  .about-cta__secondary svg {
+    color: var(--color-pink-light);
+  }
+  
+  .about-cta__secondary:hover {
+    gap: 1.2rem;
+    color: var(--color-pink-light);
+  }
+  
+  .about-cta__button:focus-visible,
+  .about-cta__secondary:focus-visible {
+    outline: 2px solid var(--color-pink-light);
+    outline-offset: 5px;
+  }
+  
+  /* =========================================
+     DECORATIVE WATERMARK
+  ========================================= */
+  
+  .about-cta__watermark {
+    position: absolute;
+    z-index: 1;
+  
+    right: 2%;
+    bottom: -4rem;
+  
+    color: rgba(255, 255, 255, 0.055);
+    font-family: var(--font-display);
+    font-size: clamp(12rem, 25vw, 28rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.08em;
+  
+    pointer-events: none;
+    user-select: none;
+  }
+  
+  /* =========================================
+     TABLET
+  ========================================= */
+  
+  @media (max-width: 1100px) {
+    .about-cta {
+      min-height: 450px;
+    }
+  
+    .about-cta__title {
+      font-size: clamp(3.2rem, 6vw, 5rem);
+    }
+  
+    .about-cta__watermark {
+      font-size: 22vw;
+    }
+  }
+  
+  /* =========================================
+     MOBILE
+  ========================================= */
+  
+  @media (max-width: 700px) {
+    .about-cta {
+      min-height: 480px;
+    }
+  
+    .about-cta__container {
+      padding:
+        5rem
+        var(--page-padding);
+    }
+  
+    .about-cta__overlay {
+      background: linear-gradient(
+        90deg,
+        rgba(24, 21, 20, 0.92),
+        rgba(24, 21, 20, 0.68)
+      );
+    }
+  
+    .about-cta__eyebrow {
+      margin-bottom: 1.25rem;
+      font-size: 0.62rem;
+    }
+  
+    .about-cta__title {
+      font-size: clamp(3rem, 9vw, 4.5rem);
+    }
+  
+    .about-cta__description {
+      font-size: 0.89rem;
+      line-height: 1.8;
+    }
+  
+    .about-cta__actions {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  
+    .about-cta__button,
+    .about-cta__secondary {
+      font-size: 0.62rem;
+    }
+  
+    .about-cta__watermark {
+      right: 0;
+      bottom: -1rem;
+      font-size: 35vw;
+    }
+  }
+  
+  /* =========================================
+     REDUCED MOTION
+  ========================================= */
+  
+  @media (prefers-reduced-motion: reduce) {
+    .about-cta__button,
+    .about-cta__secondary {
+      transition: none;
+    }
+  }
+  

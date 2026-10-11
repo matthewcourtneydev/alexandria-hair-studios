@@ -1,0 +1,33 @@
+:root {
+  /* Colors */
+  --color-black: #181514;
+  --color-espresso: #29211e;
+
+  --color-cream: #f5f0e9;
+  --color-warm-white: #faf7f2;
+
+  --color-tan: #b6a38f;
+  --color-tan-light: #d5c8ba;
+
+  --color-pink: #ca8e99;
+  --color-pink-light: #e4bec5;
+  --color-pink-dark: #a96d79;
+
+  --color-text: #211c1a;
+  --color-text-light: #f8f4ef;
+
+  /* Fonts */
+  --font-display: "Bodoni Moda", Georgia, serif;
+  --font-body: "DM Sans", Arial, sans-serif;
+
+  /* Layout */
+  --page-padding: clamp(1.25rem, 4vw, 5rem);
+  --section-spacing: clamp(5rem, 10vw, 10rem);
+
+  /* Sizing */
+  --max-width: 1600px;
+
+  /* Transitions */
+  --transition-fast: 180ms ease;
+  --transition-standard: 300ms ease;
+}
