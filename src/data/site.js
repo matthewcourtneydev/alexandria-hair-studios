@@ -6,7 +6,7 @@ export const site = {
     bookingUrl: 'https://alexandria-hair-studios.square.site',
   
     instagramUrl: 'https://www.instagram.com/alexdidmycolor/',
-    tiktokUrl: '#',
+    tiktokUrl: 'https://www.tiktok.com/@alexandria.elizabeth',
   
     amazonUrl: 'https://www.amazon.com/shop/alexxandriaa',
   

@@ -1,11 +1,10 @@
 
-import { ArrowUpRight, Sparkles } from 'lucide-react';
+import { ArrowUpRight, ArrowRight } from 'lucide-react';
 import { hairEdit } from '../../../data/hairEdit';
 import './HairEdit.css';
 
 export default function HairEdit() {
-  const products = hairEdit.products ?? [];
-  const storefrontUrl = hairEdit.storefrontUrl;
+  const products = hairEdit.featuredProducts ?? [];
 
   return (
     <section
@@ -24,106 +23,107 @@ export default function HairEdit() {
             </h2>
           </div>
 
-          <p className="hair-edit__description">
-            Great hair doesn't stop at the salon.
-            Explore Alex's selection of hair care,
-            styling products, and everyday favorites
-            for keeping your hair looking its best
-            between appointments.
-          </p>
-        </div>
+          <div className="hair-edit__intro">
+            <p className="hair-edit__description">
+              Great hair doesn't stop at the salon.
+              Discover a few of Alex's favorite products
+              for keeping your hair looking its best
+              between appointments.
+            </p>
 
-        {products.length > 0 && (
-          <div className="hair-edit__collection">
-            <div className="hair-edit__collection-meta">
-              <span>THE CURATED COLLECTION</span>
-
-              <span>
-                {String(products.length).padStart(2, '0')}
-                {' / '}FAVORITES
-              </span>
-            </div>
-
-            <div className="hair-edit__products">
-              {products.map((product, index) => (
-                <article
-                  key={product.id ?? index}
-                  className="hair-edit__product"
-                >
-                  <div className="hair-edit__product-image">
-                    {product.image ? (
-                      <img
-                        src={product.image}
-                        alt={product.name}
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    ) : (
-                      <div
-                        className="hair-edit__product-placeholder"
-                        aria-hidden="true"
-                      >
-                        <Sparkles
-                          size={20}
-                          strokeWidth={1}
-                        />
-                        <span>AHS.</span>
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="hair-edit__product-info">
-                    {product.category && (
-                      <span className="hair-edit__product-category">
-                        {product.category}
-                      </span>
-                    )}
-
-                    <h3>{product.name}</h3>
-
-                    {product.description && (
-                      <p>{product.description}</p>
-                    )}
-                  </div>
-                </article>
-              ))}
-            </div>
-
-            {products.length > 1 && (
-              <div className="hair-edit__mobile-hint">
-                SWIPE TO EXPLORE
-                <span aria-hidden="true">→</span>
-              </div>
-            )}
-          </div>
-        )}
-
-        <div className="hair-edit__bottom">
-          <p className="hair-edit__bottom-copy">
-            A few favorites for keeping the good hair days going.
-          </p>
-
-          {storefrontUrl && (
             <a
-              href={storefrontUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hair-edit__storefront-link"
+              href="/hair-edit"
+              className="hair-edit__explore"
             >
-              Shop the Storefront
+              EXPLORE THE HAIR EDIT
               <ArrowUpRight
-                size={18}
+                size={17}
                 strokeWidth={1.5}
                 aria-hidden="true"
               />
             </a>
-          )}
+          </div>
+        </div>
+
+        <div className="hair-edit__collection-meta">
+          <span>A FEW OF ALEX'S FAVORITES</span>
+          <span>01 / CURATED PICKS</span>
+        </div>
+
+        <div className="hair-edit__products">
+          {products.map((product) => (
+            <article
+              key={product.id}
+              className="hair-edit__product"
+            >
+              <a
+                href={product.url}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="hair-edit__product-link"
+                aria-label={`Shop ${product.brand} ${product.name} on Amazon (opens in a new tab)`}
+              >
+                <div className="hair-edit__product-image">
+                  <img
+                    src={product.image}
+                    alt={`${product.brand} ${product.name}`}
+                    loading="lazy"
+                    decoding="async"
+                  />
+
+                  <span
+                    className="hair-edit__product-arrow"
+                    aria-hidden="true"
+                  >
+                    <ArrowUpRight
+                      size={17}
+                      strokeWidth={1.5}
+                    />
+                  </span>
+                </div>
+
+                <div className="hair-edit__product-info">
+                  <span className="hair-edit__product-category">
+                    {product.brand}
+                  </span>
+
+                  <h3>{product.name}</h3>
+
+                  <span className="hair-edit__product-shop">
+                    SHOP PRODUCT
+                    <ArrowUpRight
+                      size={14}
+                      strokeWidth={1.5}
+                      aria-hidden="true"
+                    />
+                  </span>
+                </div>
+              </a>
+            </article>
+          ))}
+        </div>
+
+        <div className="hair-edit__bottom">
+          <p>
+            More good hair days start here.
+          </p>
+
+          <a
+            href="/hair-edit"
+            className="hair-edit__bottom-link"
+          >
+            VIEW ALL FAVORITES
+            <ArrowRight
+              size={18}
+              strokeWidth={1.5}
+              aria-hidden="true"
+            />
+          </a>
         </div>
 
         <p className="hair-edit__disclosure">
-          Some links may be affiliate links. Purchases made
-          through these links may earn a commission at no
-          additional cost to you.
+          As an Amazon Associate, Alexandria Hair Studios
+          earns from qualifying purchases.
         </p>
       </div>
     </section>

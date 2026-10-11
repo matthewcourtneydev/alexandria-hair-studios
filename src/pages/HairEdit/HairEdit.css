@@ -1,0 +1,128 @@
+
+/* =========================================
+   HAIR EDIT PAGE
+========================================= */
+
+.hair-edit-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #0c0c0e;
+  }
+  
+  .hair-edit-page__collection {
+    padding:
+      clamp(5rem, 9vw, 9rem)
+      clamp(1.5rem, 6vw, 7rem)
+      clamp(4rem, 6vw, 6rem);
+    background: #e9e1da;
+    color: #292326;
+    scroll-margin-top: 0;
+  }
+  
+  .hair-edit-page__inner {
+    max-width: 1400px;
+    margin-inline: auto;
+  }
+  
+  .hair-edit-page__intro {
+    max-width: 690px;
+    margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+  }
+  
+  .hair-edit-page__eyebrow,
+  .hair-edit-page__results-label,
+  .hair-edit-page__count {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+  }
+  
+  .hair-edit-page__eyebrow {
+    color: #9b6878;
+  }
+  
+  .hair-edit-page__intro h2 {
+    margin: 1.2rem 0 1.5rem;
+  
+    font-family: 'Bodoni Moda', serif;
+    font-size: clamp(2.75rem, 5vw, 5.5rem);
+    font-weight: 400;
+    line-height: 1.12;
+    letter-spacing: -0.045em;
+  }
+  
+  .hair-edit-page__intro h2 em {
+    color: #a77b88;
+    font-weight: 400;
+  }
+  
+  .hair-edit-page__intro p {
+    max-width: 520px;
+    margin: 0;
+  
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+    line-height: 1.85;
+    color: #5e5658;
+  }
+  
+  /* =========================================
+     RESULTS
+  ========================================= */
+  
+  .hair-edit-page__results {
+    margin-top: clamp(2rem, 4vw, 3rem);
+  }
+  
+  .hair-edit-page__results-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #cdbeb5;
+  }
+  
+  .hair-edit-page__results-label {
+    color: #9b6878;
+  }
+  
+  .hair-edit-page__results-heading h3 {
+    margin: 0.7rem 0 0;
+  
+    font-family: 'Bodoni Moda', serif;
+    font-size: clamp(2rem, 3vw, 3.25rem);
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  
+  .hair-edit-page__count {
+    flex-shrink: 0;
+    color: #71666a;
+    padding-bottom: 0.4rem;
+  }
+  
+  /* =========================================
+     MOBILE
+  ========================================= */
+  
+  @media (max-width: 600px) {
+    .hair-edit-page__collection {
+      padding: 5rem 1.25rem;
+    }
+  
+    .hair-edit-page__intro {
+      margin-bottom: 2.5rem;
+    }
+  
+    .hair-edit-page__results-heading {
+      align-items: flex-start;
+    }
+  
+    .hair-edit-page__count {
+      font-size: 0.55rem;
+    }
+  }
+  

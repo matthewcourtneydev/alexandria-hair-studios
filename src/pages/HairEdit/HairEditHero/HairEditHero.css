@@ -1,0 +1,362 @@
+/* =========================================
+   HAIR EDIT HERO
+========================================= */
+
+.hair-edit-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 100svh;
+  overflow: hidden;
+  isolation: isolate;
+  background: #0c0c0e;
+  color: #fff;
+}
+
+/* =========================================
+   BACKGROUND IMAGE
+========================================= */
+
+.hair-edit-hero__background {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.hair-edit-hero__background picture,
+.hair-edit-hero__background img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.hair-edit-hero__background img {
+  object-fit: cover;
+  object-position: 100% center;
+}
+
+/* =========================================
+     OVERLAY
+  ========================================= */
+
+.hair-edit-hero__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background: linear-gradient(
+      90deg,
+      rgba(8, 8, 10, 0.72) 0%,
+      rgba(8, 8, 10, 0.42) 35%,
+      rgba(8, 8, 10, 0.1) 70%,
+      rgba(8, 8, 10, 0.05) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(8, 8, 10, 0.42) 0%,
+      transparent 28%,
+      transparent 75%,
+      rgba(8, 8, 10, 0.35) 100%
+    );
+}
+
+/* =========================================
+     CONTENT CONTAINER
+  ========================================= */
+
+.hair-edit-hero__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1600px;
+  min-height: 100svh;
+  margin: 0 auto;
+  padding: clamp(7rem, 12vh, 10rem) clamp(1.5rem, 6vw, 7rem)
+    clamp(6rem, 10vh, 8rem);
+}
+
+.hair-edit-hero__content {
+  width: 100%;
+  max-width: 690px;
+}
+
+/* =========================================
+     EYEBROW
+  ========================================= */
+
+.hair-edit-hero__eyebrow {
+  display: block;
+  margin-bottom: 1.4rem;
+
+  color: #c68d9d;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+/* =========================================
+     TITLE
+  ========================================= */
+
+.hair-edit-hero__content h1 {
+  margin: 0;
+  color: #fff;
+
+  font-family: "Bodoni Moda", serif;
+  font-size: clamp(4rem, 7.5vw, 8.5rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.06em;
+}
+
+.hair-edit-hero__content h1 em {
+  color: #c68d9d;
+  font-weight: 400;
+}
+
+/* =========================================
+     DESCRIPTION
+  ========================================= */
+
+.hair-edit-hero__description {
+  max-width: 480px;
+  margin: 1.75rem 0 0;
+
+  color: rgba(255, 255, 255, 0.82);
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(0.95rem, 1.15vw, 1.1rem);
+  font-weight: 400;
+  line-height: 1.85;
+}
+
+/* =========================================
+     CTA
+  ========================================= */
+
+.hair-edit-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+
+  margin-top: 2.25rem;
+  padding: 1rem 1.5rem;
+
+  border: 1px solid #c68d9d;
+  border-radius: 0;
+  background: #c68d9d;
+  color: #111;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: background 250ms ease, color 250ms ease, border-color 250ms ease,
+    gap 250ms ease;
+}
+
+.hair-edit-hero__cta:hover {
+  gap: 1.65rem;
+  border-color: #fff;
+  background: #fff;
+  color: #111;
+}
+
+/* =========================================
+     SCROLL INDICATOR
+  ========================================= */
+
+.hair-edit-hero__scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  left: clamp(1.5rem, 6vw, 7rem);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.85rem;
+
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.75);
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.hair-edit-hero__scroll-line {
+  display: block;
+  width: 1px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.65);
+  transform-origin: top;
+  transition: transform 300ms ease;
+}
+
+.hair-edit-hero__scroll:hover .hair-edit-hero__scroll-line {
+  transform: scaleY(1.2);
+}
+
+/* =========================================
+     ACCESSIBILITY
+  ========================================= */
+
+.hair-edit-hero__cta:focus-visible,
+.hair-edit-hero__scroll:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 5px;
+}
+
+/* =========================================
+   TABLET + MOBILE IMAGE
+========================================= */
+
+@media (max-width: 1100px) {
+  .hair-edit-hero__background img {
+    object-position: center 30%;
+  }
+}
+
+/* Tablet portrait refinement */
+@media (min-width: 769px) and (max-width: 1100px) {
+  .hair-edit-hero__container {
+    align-items: center;
+    padding-top: 18vh;
+  }
+
+  .hair-edit-hero__content {
+    max-width: 560px;
+  }
+}
+/* =========================================
+     TABLET
+  ========================================= */
+
+@media (max-width: 1024px) {
+  .hair-edit-hero__overlay {
+    background: linear-gradient(
+        90deg,
+        rgba(8, 8, 10, 0.78) 0%,
+        rgba(8, 8, 10, 0.48) 55%,
+        rgba(8, 8, 10, 0.12) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(8, 8, 10, 0.4) 0%,
+        transparent 30%,
+        rgba(8, 8, 10, 0.3) 100%
+      );
+  }
+
+  .hair-edit-hero__content {
+    max-width: 590px;
+  }
+
+  .hair-edit-hero__content h1 {
+    font-size: clamp(4rem, 8vw, 6.5rem);
+  }
+}
+
+/* =========================================
+     MOBILE
+  ========================================= */
+
+@media (max-width: 768px) {
+  .hair-edit-hero__background img {
+    object-position: center top;
+  }
+
+  .hair-edit-hero__overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(8, 8, 10, 0.35) 0%,
+      rgba(8, 8, 10, 0.05) 25%,
+      rgba(8, 8, 10, 0.18) 40%,
+      rgba(8, 8, 10, 0.65) 65%,
+      rgba(8, 8, 10, 0.9) 100%
+    );
+  }
+
+  .hair-edit-hero__container {
+    align-items: flex-end;
+
+    padding: 7rem 1.5rem clamp(7rem, 15vh, 9rem);
+  }
+
+  .hair-edit-hero__content {
+    max-width: 540px;
+  }
+
+  .hair-edit-hero__eyebrow {
+    margin-bottom: 1rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.15em;
+  }
+
+  .hair-edit-hero__content h1 {
+    font-size: clamp(3.4rem, 11vw, 5.5rem);
+  }
+
+  .hair-edit-hero__description {
+    max-width: 400px;
+    margin-top: 1.25rem;
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+
+  .hair-edit-hero__cta {
+    margin-top: 1.75rem;
+    padding: 0.95rem 1.25rem;
+    font-size: 0.6rem;
+  }
+
+  .hair-edit-hero__scroll {
+    bottom: 1.75rem;
+    left: 1.5rem;
+  }
+
+  .hair-edit-hero__scroll-line {
+    height: 30px;
+  }
+}
+
+/* =========================================
+     SMALL MOBILE
+  ========================================= */
+
+@media (max-width: 480px) {
+  .hair-edit-hero__content h1 {
+    font-size: clamp(3rem, 12vw, 4.5rem);
+  }
+
+  .hair-edit-hero__description {
+    font-size: 0.85rem;
+  }
+}
+
+/* =========================================
+     REDUCED MOTION
+  ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .hair-edit-hero__cta,
+  .hair-edit-hero__scroll-line {
+    transition: none;
+  }
+}

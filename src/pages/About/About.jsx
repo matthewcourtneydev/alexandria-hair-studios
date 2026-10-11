@@ -3,7 +3,7 @@ import AboutIntro from "./AboutIntro/AboutIntro";
 import AboutApproach from "./AboutApproach/AboutApproach";
 import AboutPersonal from "./AboutPersonal/AboutPersonal";
 import CTA from "../../components/CTA/CTA";
-import monsteraTexture from '../../assets/textures/monstera-texture.png';
+import Cherub from "../../assets/CTAImages/cherub-cta.png"
 import { site } from '../../data/site';
 
 import "./About.css";
@@ -16,7 +16,7 @@ export default function About() {
       <AboutApproach />
       <AboutPersonal />
       <CTA
-        image={monsteraTexture}
+        image={Cherub}
         variant="monochrome"
         eyebrow="LET'S MAKE SOMETHING BEAUTIFUL"
         title="Your hair story"

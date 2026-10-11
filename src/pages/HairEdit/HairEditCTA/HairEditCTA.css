@@ -1,0 +1,308 @@
+
+/* =========================================
+   HAIR EDIT CTA
+========================================= */
+
+.hair-edit-cta {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: clamp(520px, 47vw, 720px);
+    overflow: hidden;
+    isolation: isolate;
+    background: #ad7882;
+    color: #fff8f3;
+  }
+  
+  /* =========================================
+     BACKGROUND
+  ========================================= */
+  
+  .hair-edit-cta__background {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    overflow: hidden;
+  }
+  
+  .hair-edit-cta__background img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 45%;
+  }
+  
+  /* =========================================
+     OVERLAY
+  ========================================= */
+  
+  .hair-edit-cta__overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+  
+    background: linear-gradient(
+      90deg,
+      rgba(58, 30, 38, 0.42) 0%,
+      rgba(58, 30, 38, 0.24) 35%,
+      rgba(58, 30, 38, 0.04) 70%,
+      transparent 100%
+    );
+  }
+  
+  /* =========================================
+     LAYOUT
+  ========================================= */
+  
+  .hair-edit-cta__container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1600px;
+    min-height: inherit;
+    margin: 0 auto;
+    padding:
+      clamp(5rem, 8vw, 8rem)
+      clamp(1.5rem, 6vw, 7rem);
+  }
+  
+  .hair-edit-cta__content {
+    width: 100%;
+    max-width: 570px;
+  }
+  
+  /* =========================================
+     EYEBROW
+  ========================================= */
+  
+  .hair-edit-cta__eyebrow {
+    display: block;
+    margin-bottom: 1.6rem;
+  
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    line-height: 1.6;
+    text-transform: uppercase;
+    color: rgba(255, 248, 243, 0.85);
+  }
+  
+  /* =========================================
+     HEADING
+  ========================================= */
+  
+  .hair-edit-cta__content h2 {
+    margin: 0;
+  
+    font-family: "Bodoni Moda", serif;
+    font-size: clamp(3.5rem, 6vw, 7.5rem);
+    font-weight: 400;
+    letter-spacing: -0.055em;
+    line-height: 1.06;
+    color: #fff8f3;
+  }
+  
+  .hair-edit-cta__content h2 em {
+    font-weight: 400;
+  }
+  
+  /* =========================================
+     DESCRIPTION
+  ========================================= */
+  
+  .hair-edit-cta__description {
+    max-width: 400px;
+    margin: 1.75rem 0 0;
+  
+    font-family: "DM Sans", sans-serif;
+    font-size: clamp(0.95rem, 1.15vw, 1.1rem);
+    font-weight: 400;
+    line-height: 1.85;
+    color: rgba(255, 248, 243, 0.9);
+  }
+  
+  /* =========================================
+     CTA LINK
+  ========================================= */
+  
+  .hair-edit-cta__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  
+    margin-top: 2.25rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid rgba(255, 248, 243, 0.8);
+  
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    line-height: 1.5;
+    text-decoration: none;
+    color: #fff8f3;
+  
+    transition:
+      gap 250ms ease,
+      border-color 250ms ease,
+      opacity 250ms ease;
+  }
+  
+  .hair-edit-cta__link:hover {
+    gap: 2.5rem;
+    border-color: #fff;
+  }
+  
+  .hair-edit-cta__link:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 6px;
+  }
+  
+  /* =========================================
+     AFFILIATE DISCLOSURE
+  ========================================= */
+  
+  .hair-edit-cta__disclosure {
+    display: block;
+    max-width: 400px;
+    margin-top: 2rem;
+  
+    font-family: "DM Sans", sans-serif;
+    font-size: 0.68rem;
+    line-height: 1.7;
+    color: rgba(255, 248, 243, 0.75);
+  }
+  
+  /* =========================================
+     TABLET
+  ========================================= */
+  
+  @media (max-width: 1024px) {
+    .hair-edit-cta {
+      min-height: 580px;
+    }
+  
+    .hair-edit-cta__background img {
+      object-position: 58% center;
+    }
+  
+    .hair-edit-cta__overlay {
+      background: linear-gradient(
+        90deg,
+        rgba(58, 30, 38, 0.6) 0%,
+        rgba(58, 30, 38, 0.3) 55%,
+        rgba(58, 30, 38, 0.05) 100%
+      );
+    }
+  
+    .hair-edit-cta__content {
+      max-width: 490px;
+    }
+  }
+  
+  /* =========================================
+     MOBILE
+  ========================================= */
+  
+  @media (max-width: 768px) {
+    .hair-edit-cta {
+      min-height: 680px;
+      align-items: flex-end;
+    }
+  
+    .hair-edit-cta__background img {
+      object-position: 65% center;
+    }
+  
+    .hair-edit-cta__overlay {
+      background: linear-gradient(
+        180deg,
+        rgba(58, 30, 38, 0.08) 0%,
+        rgba(58, 30, 38, 0.1) 28%,
+        rgba(58, 30, 38, 0.62) 62%,
+        rgba(58, 30, 38, 0.88) 100%
+      );
+    }
+  
+    .hair-edit-cta__container {
+      align-items: flex-end;
+      padding: 5rem 1.5rem 4rem;
+    }
+  
+    .hair-edit-cta__content {
+      max-width: 440px;
+    }
+  
+    .hair-edit-cta__eyebrow {
+      margin-bottom: 1rem;
+      font-size: 0.58rem;
+    }
+  
+    .hair-edit-cta__content h2 {
+      font-size: clamp(3.25rem, 11vw, 5rem);
+    }
+  
+    .hair-edit-cta__description {
+      margin-top: 1.25rem;
+      font-size: 0.9rem;
+      line-height: 1.75;
+    }
+  
+    .hair-edit-cta__link {
+      margin-top: 1.75rem;
+      font-size: 0.6rem;
+      gap: 1.25rem;
+    }
+  
+    .hair-edit-cta__disclosure {
+      margin-top: 1.5rem;
+      font-size: 0.62rem;
+    }
+  }
+  
+  /* =========================================
+     SMALL MOBILE
+  ========================================= */
+  
+  @media (max-width: 768px) {
+    .hair-edit-cta {
+      min-height: 740px;
+      align-items: flex-end;
+    }
+  
+    .hair-edit-cta__background img {
+      object-position: 62% center;
+    }
+  
+    .hair-edit-cta__overlay {
+      background: linear-gradient(
+        180deg,
+        rgba(58, 30, 38, 0.02) 0%,
+        rgba(58, 30, 38, 0.08) 25%,
+        rgba(58, 30, 38, 0.45) 48%,
+        rgba(58, 30, 38, 0.82) 78%,
+        rgba(58, 30, 38, 0.92) 100%
+      );
+    }
+  
+    .hair-edit-cta__container {
+      align-items: flex-end;
+      padding: 5rem 1.5rem 3.5rem;
+    }
+  }
+  
+  /* =========================================
+     REDUCED MOTION
+  ========================================= */
+  
+  @media (prefers-reduced-motion: reduce) {
+    .hair-edit-cta__link {
+      transition: none;
+    }
+  }
+  

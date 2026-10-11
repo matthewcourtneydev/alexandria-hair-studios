@@ -1,17 +1,19 @@
-import { useState, useEffect } from 'react';
-import { NavLink, Link } from 'react-router-dom';
-import { ArrowUpRight, Menu, X } from 'lucide-react';
-import './Header.css';
+import { useState, useEffect } from "react";
+import { NavLink, Link } from "react-router-dom";
+import { ArrowUpRight, Menu, X } from "lucide-react";
+import logo from "../../assets/images/logo.png";
+import "./Header.css";
 
 const navigation = [
-  { label: 'Services', path: '/services' },
-  { label: 'Lookbook', path: '/lookbook' },
-  { label: 'About', path: '/about' },
-  { label: 'New Clients', path: '/new-clients' },
-  { label: 'Policies', path: '/policies' },
+  { label: "Services", path: "/services" },
+  { label: "Lookbook", path: "/lookbook" },
+  { label: "Hair Edit", path: "/hair-edit" },
+  { label: "About", path: "/about" },
+  { label: "New Clients", path: "/new-clients" },
+  { label: "Policies", path: "/policies" },
 ];
 
-const BOOKING_URL = 'https://alexandria-hair-studios.square.site';
+const BOOKING_URL = "https://alexandria-hair-studios.square.site";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,31 +26,35 @@ export default function Header() {
 
     handleScroll();
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    document.body.style.overflow = menuOpen ? "hidden" : "";
 
     return () => {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     };
   }, [menuOpen]);
 
   useEffect(() => {
     const handleEscape = (event) => {
-      if (event.key === 'Escape') setMenuOpen(false);
+      if (event.key === "Escape") setMenuOpen(false);
     };
 
-    window.addEventListener('keydown', handleEscape);
+    window.addEventListener("keydown", handleEscape);
 
-    return () => window.removeEventListener('keydown', handleEscape);
+    return () => window.removeEventListener("keydown", handleEscape);
   }, []);
 
   return (
-    <header className={`site-header ${scrolled || menuOpen ? 'site-header--scrolled' : ''}`}>
+    <header
+      className={`site-header ${
+        scrolled || menuOpen ? "site-header--scrolled" : ""
+      }`}
+    >
       <div className="site-header__inner">
         <Link
           to="/"
@@ -56,7 +62,7 @@ export default function Header() {
           onClick={() => setMenuOpen(false)}
           aria-label="Alexandria Hair Studios home"
         >
-          AHS<span>.</span>
+          <img src={logo} alt="" className="site-header__logo-image" />
         </Link>
 
         <nav className="site-header__nav" aria-label="Main navigation">
@@ -65,7 +71,7 @@ export default function Header() {
               key={item.path}
               to={item.path}
               className={({ isActive }) =>
-                `site-header__link ${isActive ? 'is-active' : ''}`
+                `site-header__link ${isActive ? "is-active" : ""}`
               }
             >
               {item.label}
@@ -86,7 +92,7 @@ export default function Header() {
         <button
           className="site-header__toggle"
           type="button"
-          aria-label={menuOpen ? 'Close navigation' : 'Open navigation'}
+          aria-label={menuOpen ? "Close navigation" : "Open navigation"}
           aria-expanded={menuOpen}
           aria-controls="mobile-navigation"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -97,7 +103,7 @@ export default function Header() {
 
       <nav
         id="mobile-navigation"
-        className={`mobile-nav ${menuOpen ? 'mobile-nav--open' : ''}`}
+        className={`mobile-nav ${menuOpen ? "mobile-nav--open" : ""}`}
         aria-label="Mobile navigation"
         inert={!menuOpen}
       >
@@ -108,9 +114,7 @@ export default function Header() {
               to={item.path}
               onClick={() => setMenuOpen(false)}
             >
-              <span className="mobile-nav__number">
-                0{index + 1}
-              </span>
+              <span className="mobile-nav__number">0{index + 1}</span>
               {item.label}
               <ArrowUpRight size={22} strokeWidth={1} />
             </NavLink>
@@ -128,9 +132,7 @@ export default function Header() {
           <ArrowUpRight size={18} />
         </a>
 
-        <span className="mobile-nav__location">
-          CHARLOTTE, NORTH CAROLINA
-        </span>
+        <span className="mobile-nav__location">CHARLOTTE, NORTH CAROLINA</span>
       </nav>
     </header>
   );

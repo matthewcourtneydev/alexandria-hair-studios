@@ -1,0 +1,147 @@
+
+/* =========================================
+   CATEGORY SELECTOR
+========================================= */
+
+.category-selector {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.85rem;
+    width: 100%;
+  }
+  
+  .category-selector__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    min-height: 145px;
+    padding: 1.35rem 1.5rem;
+  
+    border: 1px solid #d6c9c1;
+    border-radius: 0;
+    background: #f6f1ed;
+    color: #292326;
+  
+    text-align: left;
+    cursor: pointer;
+  
+    transition:
+      background 250ms ease,
+      border-color 250ms ease,
+      color 250ms ease,
+      transform 250ms ease;
+  }
+  
+  
+  .category-selector__item:hover {
+    transform: translateY(-3px);
+    border-color: #a77b88;
+  }
+  
+  .category-selector__item.is-active {
+    background: #252123;
+    border-color: #252123;
+    color: #fff;
+  }
+  
+  .category-selector__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: auto;
+    color: #99717d;
+  }
+  
+  .category-selector__item.is-active
+  .category-selector__top {
+    color: #d5a0b0;
+  }
+  
+  .category-selector__number {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+  }
+  
+  .category-selector__title {
+    display: block;
+    margin-top: 1.25rem;
+  
+    font-family: 'Bodoni Moda', serif;
+    font-size: clamp(1.15rem, 1.45vw, 1.55rem);
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  
+  .category-selector__description {
+    display: block;
+    margin-top: 0.45rem;
+  
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    color: #71666a;
+  }
+  
+  .category-selector__item.is-active
+  .category-selector__description {
+    color: #d4c6c9;
+  }
+  
+  .category-selector__item:focus-visible {
+    outline: 2px solid #a77b88;
+    outline-offset: 4px;
+  }
+  
+  /* =========================================
+     TABLET
+  ========================================= */
+  
+  @media (max-width: 1100px) {
+    .category-selector {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    
+      .category-selector__item {
+        min-height: 135px;
+      }
+  }
+  
+  /* =========================================
+     MOBILE
+  ========================================= */
+  
+  @media (max-width: 600px) {
+    .category-selector {
+      gap: 0.65rem;
+    }
+  
+    .category-selector__item {
+      min-height: 125px;
+      padding: 1rem;
+    }
+  
+    .category-selector__title {
+      margin-top: 1rem;
+      font-size: clamp(1.05rem, 4vw, 1.35rem);
+    }
+  
+    .category-selector__description {
+      font-size: 0.68rem;
+      line-height: 1.45;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .category-selector__item {
+      transition: none;
+    }
+  
+    .category-selector__item:hover {
+      transform: none;
+    }
+  }
+  
