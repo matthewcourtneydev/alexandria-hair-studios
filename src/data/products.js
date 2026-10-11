@@ -15,6 +15,8 @@ import bumbleInvisibleOil from '../assets/images/products/bumble-invisible-oil.p
 import colorWowDreamCocktail from '../assets/images/products/color-wow-dream-cocktail.png';
 import igkGoodBehavior from '../assets/images/products/igk-good-behavior.png';
 
+
+// comment for commit 
 const amazonUrl = (asin, listId, variant = 'mixed', th = false) => {
     const params = new URLSearchParams({
       linkCode: 'ssc',
