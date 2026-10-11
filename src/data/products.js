@@ -1,4 +1,3 @@
-
 import redkenAcidicColorGloss from '../assets/images/products/redken-acidic-color-gloss.png';
 import pureologyHydrateDuo from '../assets/images/products/pureology-hydrate-duo.png';
 import pureologyColorFanatic from '../assets/images/products/pureology-color-fanatic.png';
@@ -14,7 +13,6 @@ import k18HairOil from '../assets/images/products/k18-hair-oil.png';
 import bumbleInvisibleOil from '../assets/images/products/bumble-invisible-oil.png';
 import colorWowDreamCocktail from '../assets/images/products/color-wow-dream-cocktail.png';
 import igkGoodBehavior from '../assets/images/products/igk-good-behavior.png';
-
 
 // comment for commit 
 const amazonUrl = (asin, listId, variant = 'mixed', th = false) => {
