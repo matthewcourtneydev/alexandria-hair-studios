@@ -2,7 +2,7 @@
 import { ArrowUpRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-import portrait from '../../../assets/images/portrait.jpeg';
+import portrait from '../../../assets/images/alex-black-outfit.png';
 import './AboutPreview.css';
 
 export default function AboutPreview() {
